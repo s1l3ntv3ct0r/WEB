@@ -1,0 +1,10 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext.jsx';
+import App from './App.jsx';
+import '@fontsource-variable/dm-sans';
+import '@fontsource/instrument-serif/latin-400-italic.css';
+import './styles/global.css';
+import './styles/storefront.css';
+createRoot(document.getElementById('root')).render(<BrowserRouter><AuthProvider><App/></AuthProvider></BrowserRouter>);

@@ -1,0 +1,68 @@
+name: shoplab
+services:
+  postgres:
+    image: postgres:18.4-bookworm
+    environment:
+      POSTGRES_USER: shoplab
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run scripts/setup.ps1 first}
+      POSTGRES_DB: shoplab
+    volumes:
+      - database:/var/lib/postgresql
+    networks: [lab]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U shoplab -d shoplab']
+      interval: 5s
+      timeout: 3s
+      retries: 15
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DATABASE_URL: postgresql://shoplab:${POSTGRES_PASSWORD}@postgres:5432/shoplab
+      JWT_SECRET: ${JWT_SECRET:?Run scripts/setup.ps1 first}
+      FRONTEND_URL: http://localhost:8080
+      SMTP_HOST: mailpit
+      SMTP_PORT: 1025
+      IMPORT_ALLOWED_ORIGINS: http://image-source:4101
+      SEED_DEMO: 'true'
+      COOKIE_SECURE: 'false'
+    volumes:
+      - uploads:/app/uploads
+    networks: [lab]
+    depends_on:
+      postgres: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:4000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+  nginx:
+    build:
+      context: .
+      dockerfile: infra/nginx/Dockerfile
+    ports: ['127.0.0.1:8080:8080']
+    networks: [lab]
+    depends_on:
+      backend: {condition: service_healthy}
+  mailpit:
+    image: axllent/mailpit:v1.27
+    ports: ['127.0.0.1:8025:8025']
+    networks: [lab]
+  image-source:
+    image: node:24-bookworm-slim
+    user: node
+    working_dir: /fixtures
+    volumes: ['./lab/fixtures:/fixtures:ro']
+    environment:
+      FIXTURE_BIND: 0.0.0.0
+    command: [node, server.mjs]
+    networks:
+      lab:
+        aliases: [internal-canary]
+networks:
+  lab:
+    internal: true
+volumes:
+  database:
+  uploads:

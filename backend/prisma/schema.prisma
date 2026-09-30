@@ -1,0 +1,229 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+enum Role {
+  USER
+  ADMIN
+}
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  SHIPPED
+  COMPLETED
+  CANCELLED
+}
+enum TicketStatus {
+  OPEN
+  CLOSED
+}
+model LoginAttempt {
+  key String @id
+  failures Int @default(0)
+  expiresAt DateTime
+  challengeHash String?
+  challengeExpiresAt DateTime?
+  @@index([expiresAt])
+}
+model User {
+  id Int @id @default(autoincrement())
+  email String @unique
+  username String @unique
+  passwordHash String
+  role Role @default(USER)
+  active Boolean @default(true)
+  firstName String @default("")
+  lastName String @default("")
+  avatarId String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  sessions Session[]
+  resetTokens PasswordResetToken[]
+  reviews Review[]
+  cart Cart?
+  orders Order[]
+  redemptions CouponRedemption[]
+  tickets SupportTicket[]
+  messages TicketMessage[]
+  files FileAsset[]
+}
+model Session {
+  id String @id @default(uuid())
+  userId Int
+  user User @relation(fields: [userId], references: [id])
+  expiresAt DateTime
+  revokedAt DateTime?
+  createdAt DateTime @default(now())
+  tokens RefreshToken[]
+  @@index([userId])
+}
+model RefreshToken {
+  id String @id @default(uuid())
+  sessionId String
+  session Session @relation(fields: [sessionId], references: [id])
+  tokenHash String @unique
+  expiresAt DateTime
+  consumedAt DateTime?
+}
+model PasswordResetToken {
+  id String @id @default(uuid())
+  userId Int
+  user User @relation(fields: [userId], references: [id])
+  tokenHash String @unique
+  expiresAt DateTime
+  usedAt DateTime?
+  @@index([userId])
+}
+model Product {
+  id Int @id @default(autoincrement())
+  name String
+  description String
+  price Decimal @db.Decimal(14, 0)
+  stock Int
+  category String
+  active Boolean @default(true)
+  imageId String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  reviews Review[]
+  cartItems CartItem[]
+  orderItems OrderItem[]
+}
+model Review {
+  id Int @id @default(autoincrement())
+  userId Int
+  user User @relation(fields: [userId], references: [id])
+  productId Int
+  product Product @relation(fields: [productId], references: [id])
+  rating Int
+  content String
+  createdAt DateTime @default(now())
+  @@unique([userId, productId])
+}
+model Cart {
+  id Int @id @default(autoincrement())
+  userId Int @unique
+  user User @relation(fields: [userId], references: [id])
+  couponId Int?
+  coupon Coupon? @relation(fields: [couponId], references: [id])
+  items CartItem[]
+}
+model CartItem {
+  id Int @id @default(autoincrement())
+  cartId Int
+  cart Cart @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  productId Int
+  product Product @relation(fields: [productId], references: [id])
+  quantity Int
+  @@unique([cartId, productId])
+}
+model Coupon {
+  id Int @id @default(autoincrement())
+  code String @unique
+  percent Int
+  maxUses Int
+  perUserLimit Int @default(1)
+  startsAt DateTime @default(now())
+  expiresAt DateTime
+  active Boolean @default(true)
+  carts Cart[]
+  redemptions CouponRedemption[]
+}
+model Order {
+  id Int @id @default(autoincrement())
+  userId Int
+  user User @relation(fields: [userId], references: [id])
+  subtotal Decimal @db.Decimal(14, 0)
+  discount Decimal @db.Decimal(14, 0)
+  total Decimal @db.Decimal(14, 0)
+  couponCode String?
+  shippingAddress String
+  status OrderStatus @default(PENDING)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  items OrderItem[]
+  redemption CouponRedemption?
+  checkout CheckoutRequest?
+  @@index([userId, createdAt])
+}
+model OrderItem {
+  id Int @id @default(autoincrement())
+  orderId Int
+  order Order @relation(fields: [orderId], references: [id])
+  productId Int
+  product Product @relation(fields: [productId], references: [id])
+  name String
+  unitPrice Decimal @db.Decimal(14, 0)
+  quantity Int
+}
+model CheckoutRequest {
+  id Int @id @default(autoincrement())
+  userId Int
+  key String
+  requestHash String
+  orderId Int @unique
+  order Order @relation(fields: [orderId], references: [id])
+  @@unique([userId, key])
+}
+model CouponRedemption {
+  id Int @id @default(autoincrement())
+  couponId Int
+  coupon Coupon @relation(fields: [couponId], references: [id])
+  userId Int
+  user User @relation(fields: [userId], references: [id])
+  orderId Int @unique
+  order Order @relation(fields: [orderId], references: [id])
+  createdAt DateTime @default(now())
+  @@index([couponId, userId])
+}
+model SupportTicket {
+  id Int @id @default(autoincrement())
+  userId Int
+  user User @relation(fields: [userId], references: [id])
+  title String
+  status TicketStatus @default(OPEN)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  messages TicketMessage[]
+  @@index([userId, createdAt])
+}
+model TicketMessage {
+  id Int @id @default(autoincrement())
+  ticketId Int
+  ticket SupportTicket @relation(fields: [ticketId], references: [id])
+  authorId Int
+  author User @relation(fields: [authorId], references: [id])
+  message String
+  createdAt DateTime @default(now())
+  attachments Attachment[]
+}
+model FileAsset {
+  id String @id @default(uuid())
+  uploadedBy Int
+  user User @relation(fields: [uploadedBy], references: [id])
+  kind String
+  originalName String
+  storedName String @unique
+  mimeType String
+  size Int
+  createdAt DateTime @default(now())
+  attachment Attachment?
+}
+model Attachment {
+  id Int @id @default(autoincrement())
+  messageId Int
+  message TicketMessage @relation(fields: [messageId], references: [id])
+  assetId String @unique
+  asset FileAsset @relation(fields: [assetId], references: [id])
+}
+model AuditLog {
+  id Int @id @default(autoincrement())
+  actorId Int?
+  action String
+  targetId String?
+  requestId String?
+  createdAt DateTime @default(now())
+}
