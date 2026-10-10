@@ -1,0 +1,1118 @@
+[
+  {
+    "paragraph": 1,
+    "action": "replace",
+    "before": "TỔNG HỢP PHẦN 1 ĐẾN PHẦN 8",
+    "after": "TỔNG HỢP PHẦN 1 ĐẾN PHẦN 8 VÀ KIỂM THỬ BỔ SUNG CAPTCHA"
+  },
+  {
+    "paragraph": 2,
+    "action": "replace",
+    "before": "Đợt đánh giá SL-PT-20260925 • Phiên bản tổng hợp 1.0 • Ngày phát hành 30/09/2026",
+    "after": "Đợt kiểm thử SL-PT-20260925 • Phiên bản báo cáo 1.1 • Cập nhật ngày 06/10/2026"
+  },
+  {
+    "paragraph": 3,
+    "action": "replace",
+    "before": "Người nhận: Chủ dự án ShopLab. Thực hiện: trợ lý kiểm thử theo yêu cầu của chủ dự án, dưới hình thức gray-box tự đánh giá. Đây không phải đánh giá độc lập hoặc chứng nhận an toàn OWASP.",
+    "after": "Người nhận: Chủ dự án ShopLab. Hình thức đánh giá: kiểm thử gray-box trong môi trường thử nghiệm nội bộ của ứng dụng."
+  },
+  {
+    "paragraph": 4,
+    "action": "replace",
+    "before": "Báo cáo hợp nhất toàn bộ nội dung của bảy báo cáo theo chặng và bổ sung Phần 8 để chốt findings, ưu tiên xử lý, trách nhiệm dự kiến và tiêu chí kiểm tra lại. Các phép thử gốc diễn ra ngày 25–26/09/2026; ngày 30/09 chỉ đối chiếu bằng chứng và tổng hợp, không chạy lại website hoặc audit dependency.",
+    "after": "Báo cáo trình bày kết quả kiểm thử ứng dụng ShopLab trong môi trường local, gồm khảo sát bề mặt, xác thực và phiên, phân quyền, logic nghiệp vụ, xử lý đầu vào, tệp và cấu hình triển khai. Đợt gốc diễn ra ngày 25–26/09/2026; hồ sơ được đối chiếu ngày 30/09/2026. Kiểm thử bổ sung CAPTCHA đăng nhập được thực hiện ngày 06/10/2026 trên mã nguồn hiện tại."
+  },
+  {
+    "paragraph": 6,
+    "action": "replace",
+    "before": "Xác nhận bốn finding mức Low trong phạm vi local đã thử. Cả bốn vẫn Open; chưa sửa hoặc retest sau sửa. Không có finding mức Critical, High hoặc Medium được xác nhận trong hồ sơ này, nhưng không thể suy ra ứng dụng không còn các rủi ro đó. Phần Docker/Nginx/TLS và image runtime chưa được kiểm thử thực tế.",
+    "after": "Đợt gốc xác nhận bốn phát hiện mức Low: phân biệt email khi đăng ký, checkout vượt giới hạn tiền, ID ngoài Int32 gây lỗi máy chủ và phạm vi phục vụ tệp của Vite. Cả bốn còn Open, chưa được kiểm tra lại sau sửa. Phần bổ sung CAPTCHA có 2 bài kiểm thử tích hợp và 15 tình huống đạt tiêu chí; không ghi nhận bỏ qua mã xác minh trong các trường hợp đã thử. Một quan sát Informational về việc đổi mã theo email được bổ sung. Docker/Nginx/TLS và image runtime chưa được kiểm thử thực tế."
+  },
+  {
+    "paragraph": 8,
+    "action": "delete",
+    "before": "Bản gốc bằng chứng giữ nguyên. Ảnh trong bản tổng hợp được hiển thị thang xám để phù hợp yêu cầu đen trắng; không thay đổi file ảnh gốc. Mọi chữ, kể cả tiêu đề, bảng, chú thích và số trang đều dùng Times New Roman cỡ 13."
+  },
+  {
+    "paragraph": 20,
+    "action": "replace",
+    "before": "Các mục lục dẫn tới từng phần. Bên trong mỗi phần giữ số hiệu case và evidence để tra cứu chi tiết; đường dẫn file tương đối được tính từ thư mục dự án khi ghi trong nội dung.",
+    "after": "Mỗi phép thử có mã tình huống và mã bằng chứng để tra cứu trong hồ sơ kỹ thuật. Đường dẫn tương đối trong báo cáo được tính từ thư mục dự án tại thời điểm kiểm thử."
+  },
+  {
+    "paragraph": 24,
+    "action": "replace",
+    "before": "PASS chỉ có nghĩa đạt tiêu chí của case đã ghi. REVIEW là nội dung cần diễn giải hoặc xác minh thêm; PARTIAL là phần chưa thể kiểm tra đầy đủ. Một nhóm PASS tái hiện đúng lỗi không có nghĩa lỗi đã Fixed. Finding được đếm theo nguyên nhân và bằng chứng duy nhất, không theo số case hoặc số ảnh.",
+    "after": "PASS là đáp ứng tiêu chí của phép thử; REVIEW là kết quả cần đối chiếu hoặc xác minh thêm; PARTIAL là phép thử chưa thực hiện đầy đủ. Open là phát hiện chưa được khắc phục và kiểm tra lại. Số phát hiện được thống kê theo nguyên nhân, không theo số request hay số ảnh."
+  },
+  {
+    "paragraph": 25,
+    "action": "replace",
+    "before": "Các chương 1–7 giữ nguyên kết quả tại thời điểm của báo cáo gốc. Những câu như “chưa bắt đầu phần tiếp theo”, “chờ đồng ý” hoặc danh sách finding Open trong các chương đó là mốc lịch sử. Trạng thái cuối cùng và quyết định toàn đợt nằm ở phần mở đầu và Phần 8 của báo cáo này.",
+    "after": "Kết quả từng chương phản ánh trạng thái ứng dụng tại ngày kiểm thử tương ứng. Danh sách phát hiện và trạng thái hiện hành được trình bày ở phần mở đầu và chương kết luận."
+  },
+  {
+    "paragraph": 26,
+    "action": "replace",
+    "before": "Không cộng các cột thành một tổng request hoặc tỷ lệ an toàn: phép đo có cách thu thập khác nhau và traffic browser nền không được đếm đồng nhất. Tổng 30 ảnh là số ảnh evidence của các phần; bản báo cáo gộp giữ các ảnh đã được chọn trong bảy báo cáo nguồn.",
+    "after": "Khối lượng kiểm thử được thống kê riêng theo phương pháp thu thập của từng chương. Các bộ log HTTP client và traffic nền của trình duyệt không có cùng cách đếm nên không cộng thành tổng số request. Hồ sơ gốc gồm 30 ảnh bằng chứng."
+  },
+  {
+    "paragraph": 28,
+    "action": "delete",
+    "before": "Nội dung từ Part1_Recon_Report.docx. Các bằng chứng và ngày thực hiện trong chương này giữ theo báo cáo gốc; kết luận toàn đợt xem Phần 8."
+  },
+  {
+    "paragraph": 29,
+    "action": "delete",
+    "before": "Báo cáo recon ShopLab"
+  },
+  {
+    "paragraph": 30,
+    "action": "delete",
+    "before": "Phần 1 — Xác định môi trường và bề mặt kiểm thử"
+  },
+  {
+    "paragraph": 31,
+    "action": "replace",
+    "before": "Kết quả: môi trường local hoạt động và đã lập inventory phục vụ kiểm thử chuyên sâu. Phần 1 hoàn tất; chưa thực hiện Phần 2 và chưa xác nhận lỗ hổng bảo mật. Đây không phải kết luận ShopLab an toàn.",
+    "after": "Môi trường local hoạt động và đã được lập danh mục bề mặt kiểm thử. Giai đoạn khảo sát chưa ghi nhận phát hiện bảo mật; các phép thử chuyên sâu được trình bày ở những chương tiếp theo."
+  },
+  {
+    "paragraph": 34,
+    "action": "replace",
+    "before": "Không có thay đổi code ứng dụng trong lượt capture: hash của 81 tệp trong manifest trước/sau trùng nhau. Manifest định danh tệp trên đĩa; không chứng minh toàn bộ tiến trình đã được restart từ bản đó. Không restart dịch vụ hoặc reset dữ liệu của người dùng.",
+    "after": "Không có thay đổi code ứng dụng trong lượt capture: hash của 81 tệp trong manifest trước/sau trùng nhau. Manifest định danh tệp trên đĩa; không chứng minh toàn bộ tiến trình đã được restart từ bản đó. Các dịch vụ và dữ liệu đang có không được khởi tạo lại trong giai đoạn khảo sát."
+  },
+  {
+    "paragraph": 36,
+    "action": "replace",
+    "before": "Công cụ gửi trực tiếp tới localhost, không điều khiển Firefox hoặc Burp đang mở của người dùng. Intercept của Burp không ảnh hưởng lượt capture này. Browser chặn origin ngoài http://localhost:5173; không có request ngoài origin bị ghi nhận trong bộ điều hướng.",
+    "after": "Các request được gửi trực tiếp đến localhost bằng HTTP client và trình duyệt kiểm thử. Bộ điều hướng giới hạn origin ở http://localhost:5173; không ghi nhận request ngoài origin trong lượt khảo sát."
+  },
+  {
+    "paragraph": 47,
+    "action": "delete",
+    "before": "Điểm dừng và bước tiếp theo"
+  },
+  {
+    "paragraph": 48,
+    "action": "delete",
+    "before": "Phần 1 đã hoàn tất theo scope nêu trên. Phần 2 đề xuất kiểm tra đăng ký/login, enumeration có đối chứng, policy/rate limit, reset, JWT, refresh rotation/reuse, logout và thu hồi phiên. Trước test ghi dữ liệu cần chốt fixture và snapshot riêng. Chỉ bắt đầu sau khi người dùng đồng ý."
+  },
+  {
+    "paragraph": 58,
+    "action": "replace",
+    "before": "Ba phiên được tạo trong đợt đã nhận phản hồi logout 200. Đợt này không can thiệp phiên Firefox/Burp của người dùng và không thay đổi quyền quản trị.",
+    "after": "Ba phiên được tạo trong lượt khảo sát đều nhận phản hồi logout 200. Quyền quản trị được giữ nguyên."
+  },
+  {
+    "paragraph": 66,
+    "action": "replace",
+    "before": "Nguồn định hướng: pentest/scope.md, ASSESSMENT_SEQUENCE.md, docs/openapi.yaml, docs/authorization-matrix.md và route/middleware hiện tại. Cấu trúc báo cáo tham khảo OWASP WSTG v4.2 Reporting đã đối chiếu trước đó: https://wstg.owasp.org/v4.2/5-Reporting/. Không tuyên bố đạt hoặc bao phủ toàn bộ OWASP.",
+    "after": "Nguồn định hướng: pentest/scope.md, ASSESSMENT_SEQUENCE.md, docs/openapi.yaml, docs/authorization-matrix.md và route/middleware hiện tại. Phương pháp báo cáo tham khảo OWASP WSTG v4.2 Reporting: https://wstg.owasp.org/v4.2/5-Reporting/."
+  },
+  {
+    "paragraph": 68,
+    "action": "delete",
+    "before": "Nội dung từ Part2_Authentication_Session_Report.docx. Các bằng chứng và ngày thực hiện trong chương này giữ theo báo cáo gốc; kết luận toàn đợt xem Phần 8."
+  },
+  {
+    "paragraph": 69,
+    "action": "delete",
+    "before": "Báo cáo kiểm thử xác thực và phiên ShopLab"
+  },
+  {
+    "paragraph": 72,
+    "action": "replace",
+    "before": "PASS chỉ áp dụng tiêu chí ghi trong từng nhóm. Hai nhóm REVIEW của log gốc là P2-03 và P2-15, đã được đối chiếu thành cùng F-P2-001. Không dùng số nhóm đạt để tuyên bố web an toàn hay đạt toàn bộ OWASP. Chưa bắt đầu Phần 3 và chưa sửa lỗi.",
+    "after": "PASS áp dụng cho tiêu chí ghi trong từng nhóm. Hai nhóm REVIEW, P2-03 và P2-15, cùng cung cấp bằng chứng cho F-P2-001. Phát hiện này còn Open và chưa được kiểm tra lại sau sửa."
+  },
+  {
+    "paragraph": 74,
+    "action": "replace",
+    "before": "Request live cuối có RateLimit r=0; t=748 lúc 16:44:44. Các thao tác auth trong đợt dùng hết bucket 30/15 phút của IP local; thao tác tiếp có thể gặp 429 đến khoảng 16:57:12 ngày 25/09/2026. Không reset hoặc tắt limiter. Chuỗi thử ngưỡng 31 request riêng chỉ chạy trên instance cô lập.",
+    "after": "Trong lượt kiểm thử ngày 25/09/2026, các thao tác xác thực đã sử dụng hết bucket 30 request/15 phút của IP local. Response cuối ghi RateLimit r=0; t=748 lúc 16:44:44, tương ứng thời điểm khôi phục khoảng 16:57:12. Limiter được giữ nguyên; chuỗi kiểm tra ngưỡng 31 request chạy trên instance cô lập."
+  },
+  {
+    "paragraph": 76,
+    "action": "replace",
+    "before": "Thử nghiệm theo đúng chặng Authentication và session: đăng ký, login, JWT, refresh, logout, forgot/reset và đổi mật khẩu. Origin chuẩn là http://localhost:5173. Firefox và Burp của người dùng không bị điều khiển; request được gửi bằng HTTP client và browser riêng.",
+    "after": "Phạm vi gồm đăng ký, đăng nhập, JWT, refresh, logout, forgot/reset và đổi mật khẩu. Origin chuẩn là http://localhost:5173. Request được gửi bằng HTTP client và trình duyệt kiểm thử riêng."
+  },
+  {
+    "paragraph": 79,
+    "action": "replace",
+    "before": "Hai fixture A/B được đăng ký qua API; C được tạo qua DB cho phép thử bổ sung. Sau mỗi lượt, xóa đúng các record user/session/refresh/reset/cart/audit thuộc fixture; không xóa tài khoản demo hay dữ liệu mua hàng có sẵn. Đối chiếu toàn bộ record User có sẵn trước/sau không thay đổi. Không tuyên bố mọi bảng hoặc hoạt động đồng thời của người dùng đã được so sánh.",
+    "after": "Hai fixture A/B được đăng ký qua API; C được tạo qua DB cho phép thử bổ sung. Sau mỗi lượt, xóa đúng các record user/session/refresh/reset/cart/audit thuộc fixture; không xóa tài khoản demo hay dữ liệu mua hàng có sẵn. Đối chiếu toàn bộ record User có sẵn trước/sau không thay đổi. Đối chiếu trong bước này giới hạn ở các bản ghi User có sẵn; những bảng khác và hoạt động đồng thời ngoài lượt kiểm thử chưa được so sánh đầy đủ."
+  },
+  {
+    "paragraph": 102,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 104,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Health 200. Cả ba payload đăng ký bị 400 VALIDATION_ERROR. Đây chỉ là các biên đã thử, chưa phải kiểm tra toàn bộ chính sách mật khẩu.",
+    "after": "Kết quả: Health 200. Cả ba payload đăng ký bị 400 VALIDATION_ERROR. Đây chỉ là các biên đã thử, chưa phải kiểm tra toàn bộ chính sách mật khẩu."
+  },
+  {
+    "paragraph": 107,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 109,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Hai request 200, role USER, không có passwordHash. Refresh cookie có HttpOnly, SameSite=Strict, Path=/api/auth, Max-Age=604800. JWT HS256, issuer shoplab, audience shoplab-web, exp−iat=1800 giây. Secure vắng mặt trong HTTP local; không suy ra cấu hình HTTPS production.",
+    "after": "Kết quả: Hai request 200, role USER, không có passwordHash. Refresh cookie có HttpOnly, SameSite=Strict, Path=/api/auth, Max-Age=604800. JWT HS256, issuer shoplab, audience shoplab-web, exp−iat=1800 giây. Secure vắng mặt trong HTTP local; không suy ra cấu hình HTTPS production."
+  },
+  {
+    "paragraph": 114,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Cả hai trả 409 ALREADY_EXISTS so với 200 khi mới. Xác nhận F-P2-001; username là tín hiệu phụ, email là tác động riêng tư chính. Không suy ra khả năng chiếm tài khoản.",
+    "after": "Kết quả: Cả hai trả 409 ALREADY_EXISTS so với 200 khi mới. Xác nhận F-P2-001; username là tín hiệu phụ, email là tác động riêng tư chính. Không suy ra khả năng chiếm tài khoản."
+  },
+  {
+    "paragraph": 118,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 120,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Bốn request sai đều 401 LOGIN_FAILED cùng thông báo. Login email chuẩn hóa trả 200. Chỉ kiểm tra status/body; không kết luận chống enumeration qua timing với cỡ mẫu nhỏ này.",
+    "after": "Kết quả: Bốn request sai đều 401 LOGIN_FAILED cùng thông báo. Login email chuẩn hóa trả 200. Chỉ kiểm tra status/body; không kết luận chống enumeration qua timing với cỡ mẫu nhỏ này."
+  },
+  {
+    "paragraph": 123,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 125,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Control 200; bốn biến thể sai đều 401. Payload ký đúng nhưng sai issuer/audience/exp được kiểm tra riêng tại P2-17, trên instance cô lập.",
+    "after": "Kết quả: Control 200; bốn biến thể sai đều 401. Payload ký đúng nhưng sai issuer/audience/exp được kiểm tra riêng tại P2-17, trên instance cô lập."
+  },
+  {
+    "paragraph": 128,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 130,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Sáu thao tác bị 403; access gốc vẫn 200. Đây là phép thử kiểm tra header phía server, chưa mô phỏng toàn bộ hành vi CSRF/SameSite của trình duyệt đa origin. Host 127.0.0.1 khác cấu hình localhost nên bị chặn.",
+    "after": "Kết quả: Sáu thao tác bị 403; access gốc vẫn 200. Đây là phép thử kiểm tra header phía server, chưa mô phỏng toàn bộ hành vi CSRF/SameSite của trình duyệt đa origin. Host 127.0.0.1 khác cấu hình localhost nên bị chặn."
+  },
+  {
+    "paragraph": 134,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 136,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Cả hai 401. Không dò không gian token, không thực hiện brute force.",
+    "after": "Kết quả: Cả hai 401. Không dò không gian token, không thực hiện brute force."
+  },
+  {
+    "paragraph": 139,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 141,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Rotation 200 và giá trị token thay đổi. Replay T0 401, access/T1 của family đó 401. Phiên A độc lập vẫn 200. Bằng chứng kiểm tra cả access và refresh, không chỉ cookie phía client.",
+    "after": "Kết quả: Rotation 200 và giá trị token thay đổi. Replay T0 401, access/T1 của family đó 401. Phiên A độc lập vẫn 200. Bằng chứng kiểm tra cả access và refresh, không chỉ cookie phía client."
+  },
+  {
+    "paragraph": 144,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 146,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Logout 200 và clear-cookie hết hạn về 01/01/1970; access/refresh cũ đều 401. Chỉ thực hiện trên phiên do đợt này tạo.",
+    "after": "Kết quả: Logout 200 và clear-cookie hết hạn về 01/01/1970; access/refresh cũ đều 401. Chỉ thực hiện trên phiên do đợt này tạo."
+  },
+  {
+    "paragraph": 150,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 152,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Bốn request ở trạng thái bị cấm đều 401; control sau phục hồi 200. Đây là thử trạng thái được dựng bằng DB, không phải chờ tự hết hạn 7 ngày và không chứng minh idle timeout.",
+    "after": "Kết quả: Bốn request ở trạng thái bị cấm đều 401; control sau phục hồi 200. Đây là thử trạng thái được dựng bằng DB, không phải chờ tự hết hạn 7 ngày và không chứng minh idle timeout."
+  },
+  {
+    "paragraph": 155,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 157,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Hai forgot response cùng 200 và cùng body. Reset ngẫu nhiên 400, password ngắn 400. Known/unknown mất 49/10 ms trong một cặp đo; chưa đủ mẫu xác nhận hoặc bác bỏ timing enumeration.",
+    "after": "Kết quả: Hai forgot response cùng 200 và cùng body. Reset ngẫu nhiên 400, password ngắn 400. Known/unknown mất 49/10 ms trong một cặp đo; chưa đủ mẫu xác nhận hoặc bác bỏ timing enumeration."
+  },
+  {
+    "paragraph": 160,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 162,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: T2 khác T1; link bị thay thế và link có expiresAt quá khứ đều 400. Expiry được kiểm tra bằng fixture, chưa chờ 30 phút thời gian thực.",
+    "after": "Kết quả: T2 khác T1; link bị thay thế và link có expiresAt quá khứ đều 400. Expiry được kiểm tra bằng fixture, chưa chờ 30 phút thời gian thực."
+  },
+  {
+    "paragraph": 166,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 168,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: UI reset 200; replay 400. Bốn request từ hai phiên A cũ 401. Password cũ 401, password mới 200. B vẫn 200. SMTP chỉ dùng làm inbox thử nghiệm, không đánh giá inbox như mục tiêu tấn công.",
+    "after": "Kết quả: UI reset 200; replay 400. Bốn request từ hai phiên A cũ 401. Password cũ 401, password mới 200. B vẫn 200. SMTP chỉ dùng làm inbox thử nghiệm, không đánh giá inbox như mục tiêu tấn công."
+  },
+  {
+    "paragraph": 171,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 173,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Kết quả [200,401]; access của nhánh thắng sau đó 401 do cơ chế phát hiện reuse thu hồi family. Chỉ một cặp đồng thời; chưa kiểm tra tải hay mọi lịch xen kẽ. Hành vi này có thể ảnh hưởng UX nhiều tab, chưa được xếp là lỗ hổng.",
+    "after": "Kết quả: Kết quả [200,401]; access của nhánh thắng sau đó 401 do cơ chế phát hiện reuse thu hồi family. Chỉ một cặp đồng thời; chưa kiểm tra tải hay mọi lịch xen kẽ. Hành vi này có thể ảnh hưởng UX nhiều tab, chưa được xếp là lỗ hổng."
+  },
+  {
+    "paragraph": 178,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: UI hiện A record with these details already exists.; HTTP 409. Ảnh E-P2-02 tái hiện F-P2-001, không tính là phát hiện thứ hai.",
+    "after": "Kết quả: UI hiện A record with these details already exists.; HTTP 409. Ảnh E-P2-02 tái hiện F-P2-001, không tính là phát hiện thứ hai."
+  },
+  {
+    "paragraph": 182,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 184,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Hai storage rỗng, JavaScript không thấy refresh cookie. Sau logout, profile chuyển về login. Đây là quan sát một browser context; không phải đánh giá đầy đủ XSS, cache hay browser history.",
+    "after": "Kết quả: Hai storage rỗng, JavaScript không thấy refresh cookie. Sau logout, profile chuyển về login. Đây là quan sát một browser context; không phải đánh giá đầy đủ XSS, cache hay browser history."
+  },
+  {
+    "paragraph": 187,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 189,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Control có chữ ký đúng trả 200; expired, sai issuer, audience, subject-session binding và sid không tồn tại đều 401. Không dùng hoặc tiết lộ JWT secret thật. Đây là kiểm thử bổ trợ cùng source, không phải bằng chứng những token tự ký này được gửi tới live instance.",
+    "after": "Kết quả: Control có chữ ký đúng trả 200; expired, sai issuer, audience, subject-session binding và sid không tồn tại đều 401. Không dùng hoặc tiết lộ JWT secret thật. Đây là kiểm thử bổ trợ cùng source, không phải bằng chứng những token tự ký này được gửi tới live instance."
+  },
+  {
+    "paragraph": 192,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 194,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: 30 request đầu 400, request 31 và ba request sau 429. XFF không vượt được bucket; các endpoint chia sẻ bucket. Chưa kiểm tra reset window theo thời gian, nhiều replica hoặc cấu hình Nginx. Không gửi chuỗi 31 request này tới web live.",
+    "after": "Kết quả: 30 request đầu 400, request 31 và ba request sau 429. XFF không vượt được bucket; các endpoint chia sẻ bucket. Chưa kiểm tra reset window theo thời gian, nhiều replica hoặc cấu hình Nginx. Không gửi chuỗi 31 request này tới web live."
+  },
+  {
+    "paragraph": 198,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 200,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Thiếu bearer 401, ba payload sai 400. Hash mật khẩu của C vẫn khớp password cũ. Phiên/reset được dựng bằng DB là tiền điều kiện có kiểm soát, không phải phát hiện khả năng tạo token từ bên ngoài.",
+    "after": "Kết quả: Thiếu bearer 401, ba payload sai 400. Hash mật khẩu của C vẫn khớp password cũ. Phiên/reset được dựng bằng DB là tiền điều kiện có kiểm soát, không phải phát hiện khả năng tạo token từ bên ngoài."
+  },
+  {
+    "paragraph": 203,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 205,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Login 200, refresh token và sid mới khác phiên gửi trước. Chưa thực hiện mọi biến thể fixation như cookie injection từ subdomain.",
+    "after": "Kết quả: Login 200, refresh token và sid mới khác phiên gửi trước. Chưa thực hiện mọi biến thể fixation như cookie injection từ subdomain."
+  },
+  {
+    "paragraph": 208,
+    "action": "delete",
+    "before": "Kết luận: Đạt các tiêu chí đã thử."
+  },
+  {
+    "paragraph": 210,
+    "action": "replace",
+    "before": "Quan sát và giới hạn: Đổi mật khẩu 200; sáu request từ ba phiên cũ đều 401. Reset token pending có usedAt; bước này xác nhận trạng thái DB, không replay link qua HTTP. Password cũ 401, password mới 200.",
+    "after": "Kết quả: Đổi mật khẩu 200; sáu request từ ba phiên cũ đều 401. Reset token pending có usedAt; bước này xác nhận trạng thái DB, không replay link qua HTTP. Password cũ 401, password mới 200."
+  },
+  {
+    "paragraph": 224,
+    "action": "replace",
+    "before": "Mã chạy là pentest/run-part2.cjs và pentest/run-part2-password-change.cjs. Cả hai từ chối ghi đè khi evidence đã tồn tại. Khi retest cần đổi run folder, tạo fixture mới và lập kế hoạch quota auth; không chạy lại tùy tiện khi người dùng đang thao tác. Backup nhạy cảm được lưu riêng .local, không đóng gói vào report.",
+    "after": "Mã chạy kiểm thử là pentest/run-part2.cjs và pentest/run-part2-password-change.cjs. Cả hai từ chối ghi đè khi bằng chứng đã tồn tại. Mỗi lượt kiểm tra lại cần thư mục mới, dữ liệu thử nghiệm mới và kế hoạch kiểm soát quota xác thực. Backup nhạy cảm được lưu riêng trong .local, không đính kèm báo cáo."
+  },
+  {
+    "paragraph": 230,
+    "action": "replace",
+    "before": "Đối chiếu ngày 25/09/2026. WSTG dùng để định hướng kiểm tra, không phải chứng nhận. Hoàn tất Phần 2 theo phạm vi ghi nhận; dừng tại đây để chủ dự án quyết định Phần 3 về phân quyền và IDOR.",
+    "after": "Tài liệu WSTG được đối chiếu ngày 25/09/2026 và dùng để xây dựng tiêu chí kiểm thử."
+  },
+  {
+    "paragraph": 232,
+    "action": "delete",
+    "before": "Nội dung từ Part3_Authorization_IDOR_Report.docx. Các bằng chứng và ngày thực hiện trong chương này giữ theo báo cáo gốc; kết luận toàn đợt xem Phần 8."
+  },
+  {
+    "paragraph": 233,
+    "action": "delete",
+    "before": "Báo cáo kiểm thử phân quyền ShopLab"
+  },
+  {
+    "paragraph": 234,
+    "action": "replace",
+    "before": "Phần 3 hoàn tất trong phạm vi đã thực hiện. Chưa xác nhận lỗi vượt quyền mới: truy cập chéo tài khoản, quyền admin và quan hệ ticket–message–attachment được chặn theo ma trận trong các trường hợp đã thử. Kết luận này không phải chứng nhận toàn bộ ứng dụng an toàn.",
+    "after": "Phần 3 hoàn tất trong phạm vi đã thực hiện. Chưa xác nhận lỗi vượt quyền mới: truy cập chéo tài khoản, quyền admin và quan hệ ticket–message–attachment được chặn theo ma trận trong các trường hợp đã thử."
+  },
+  {
+    "paragraph": 237,
+    "action": "replace",
+    "before": "Không sửa code ứng dụng. F-P2-001 của Phần 2 vẫn Open, chưa sửa hoặc retest. Chưa bắt đầu Phần 4 về logic thương mại, coupon, checkout và race.",
+    "after": "Mã nguồn ứng dụng được giữ nguyên trong Phần 3. F-P2-001 vẫn Open và chưa được kiểm tra lại sau sửa."
+  },
+  {
+    "paragraph": 242,
+    "action": "replace",
+    "before": "Ảnh upload là PNG 32×32 tạo riêng cho test. Không đọc hoặc ghi đè file cá nhân. Public product fixture xuất hiện tạm trong catalogue lúc kiểm thử; đã dọn sau đó. Firefox/Burp của người dùng không bị điều khiển; ảnh và HTTP evidence do browser/client riêng thu thập.",
+    "after": "Ảnh upload là PNG 32×32 được tạo riêng cho kiểm thử. Sản phẩm thử nghiệm xuất hiện tạm trong catalogue và đã được dọn sau lượt chạy. Ảnh giao diện và bằng chứng HTTP được thu bằng trình duyệt và client kiểm thử riêng; tệp cá nhân được giữ nguyên."
+  },
+  {
+    "paragraph": 253,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-001, E-P3-002, E-P3-003, E-P3-004, E-P3-005, E-P3-006, E-P3-007. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-001, E-P3-002, E-P3-003, E-P3-004, E-P3-005, E-P3-006, E-P3-007."
+  },
+  {
+    "paragraph": 257,
+    "action": "replace",
+    "before": "Kết quả: 38 request trả 401. Bao gồm profile, cart item, order read/cancel, ticket read/reply/close/upload, review edit/delete và các route admin. Không tuyên bố đã thử mọi method riêng tư của ứng dụng.",
+    "after": "Kết quả: 38 request trả 401. Bao gồm profile, cart item, order read/cancel, ticket read/reply/close/upload, review edit/delete và các route admin. Các method ngoài danh sách kiểm thử chưa được đánh giá trong nhóm này."
+  },
+  {
+    "paragraph": 258,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-008 đến E-P3-045 (38 records). Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-008 đến E-P3-045 (38 records)."
+  },
+  {
+    "paragraph": 263,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-046 đến E-P3-091 (46 records); DB D-P3-001. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-046 đến E-P3-091 (46 records); DB D-P3-001."
+  },
+  {
+    "paragraph": 269,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-092, E-P3-093, E-P3-094, E-P3-095, E-P3-096, E-P3-097, E-P3-098, E-P3-099, E-P3-100. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-092, E-P3-093, E-P3-094, E-P3-095, E-P3-096, E-P3-097, E-P3-098, E-P3-099, E-P3-100."
+  },
+  {
+    "paragraph": 274,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-101, E-P3-102, E-P3-103, E-P3-104, E-P3-105, E-P3-106, E-P3-107, E-P3-108; DB D-P3-002. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-101, E-P3-102, E-P3-103, E-P3-104, E-P3-105, E-P3-106, E-P3-107, E-P3-108; DB D-P3-002."
+  },
+  {
+    "paragraph": 279,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-109, E-P3-110, E-P3-111, E-P3-112, E-P3-113, E-P3-114, E-P3-115, E-P3-116. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-109, E-P3-110, E-P3-111, E-P3-112, E-P3-113, E-P3-114, E-P3-115, E-P3-116."
+  },
+  {
+    "paragraph": 285,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-117, E-P3-118, E-P3-119, E-P3-120; DB D-P3-003. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-117, E-P3-118, E-P3-119, E-P3-120; DB D-P3-003."
+  },
+  {
+    "paragraph": 290,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-121, E-P3-122, E-P3-123, E-P3-124, E-P3-125, E-P3-126, E-P3-127, E-P3-128, E-P3-129; DB D-P3-004. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-121, E-P3-122, E-P3-123, E-P3-124, E-P3-125, E-P3-126, E-P3-127, E-P3-128, E-P3-129; DB D-P3-004."
+  },
+  {
+    "paragraph": 295,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-130, E-P3-131, E-P3-132, E-P3-133, E-P3-134, E-P3-135, E-P3-136, E-P3-137. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-130, E-P3-131, E-P3-132, E-P3-133, E-P3-134, E-P3-135, E-P3-136, E-P3-137."
+  },
+  {
+    "paragraph": 301,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-138, E-P3-139, E-P3-140, E-P3-141, E-P3-142, E-P3-143, E-P3-144, E-P3-145. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-138, E-P3-139, E-P3-140, E-P3-141, E-P3-142, E-P3-143, E-P3-144, E-P3-145."
+  },
+  {
+    "paragraph": 306,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-146, E-P3-147, E-P3-148, E-P3-149; DB D-P3-005. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-146, E-P3-147, E-P3-148, E-P3-149; DB D-P3-005."
+  },
+  {
+    "paragraph": 311,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-150, E-P3-151, E-P3-152, E-P3-153, E-P3-154. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-150, E-P3-151, E-P3-152, E-P3-153, E-P3-154."
+  },
+  {
+    "paragraph": 317,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-155, E-P3-156, E-P3-157, E-P3-158, E-P3-159, E-P3-160, E-P3-161, E-P3-162; DB D-P3-006. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-155, E-P3-156, E-P3-157, E-P3-158, E-P3-159, E-P3-160, E-P3-161, E-P3-162; DB D-P3-006."
+  },
+  {
+    "paragraph": 322,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-163 đến E-P3-173 (11 records). Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-163 đến E-P3-173 (11 records)."
+  },
+  {
+    "paragraph": 327,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-174, E-P3-175; DB D-P3-007. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-174, E-P3-175; DB D-P3-007."
+  },
+  {
+    "paragraph": 333,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-176, E-P3-177, E-P3-178, E-P3-179. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-176, E-P3-177, E-P3-178, E-P3-179."
+  },
+  {
+    "paragraph": 338,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-180, E-P3-181, E-P3-182, E-P3-183, E-P3-184, E-P3-185, E-P3-186, E-P3-187. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-180, E-P3-181, E-P3-182, E-P3-183, E-P3-184, E-P3-185, E-P3-186, E-P3-187."
+  },
+  {
+    "paragraph": 340,
+    "action": "replace",
+    "before": "Kỳ vọng: Admin C chỉ đổi B synthetic; token trước promotion/demotion/disable hết hiệu lực; quyền mới chỉ dùng với phiên mới. Không tự hạ quyền C.",
+    "after": "Kỳ vọng: Admin C chỉ đổi B synthetic; token trước promotion/demotion/disable hết hiệu lực; quyền mới chỉ dùng với phiên mới. Quyền ADMIN của C được giữ nguyên."
+  },
+  {
+    "paragraph": 343,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-188 đến E-P3-201 (14 records). Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-188 đến E-P3-201 (14 records)."
+  },
+  {
+    "paragraph": 349,
+    "action": "replace",
+    "before": "Bằng chứng: Screenshot metadata trong results.json. Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: Screenshot metadata trong results.json."
+  },
+  {
+    "paragraph": 354,
+    "action": "replace",
+    "before": "Bằng chứng: E-P3-202 đến E-P3-212 (11 records). Đạt tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P3-202 đến E-P3-212 (11 records)."
+  },
+  {
+    "paragraph": 365,
+    "action": "replace",
+    "before": "Cleanup giới hạn và bước tiếp theo",
+    "after": "Bảo toàn dữ liệu và giới hạn kiểm thử"
+  },
+  {
+    "paragraph": 378,
+    "action": "replace",
+    "before": "Đối chiếu ngày 25/09/2026; dùng để định hướng, không phải chứng nhận. Dừng sau báo cáo này và chờ chủ dự án quyết định có tiếp tục Phần 4 hay không.",
+    "after": "Tài liệu về IDOR và kiểm soát phân quyền được đối chiếu ngày 25/09/2026."
+  },
+  {
+    "paragraph": 380,
+    "action": "delete",
+    "before": "Nội dung từ Part4_Business_Logic_Report.docx. Các bằng chứng và ngày thực hiện trong chương này giữ theo báo cáo gốc; kết luận toàn đợt xem Phần 8."
+  },
+  {
+    "paragraph": 381,
+    "action": "delete",
+    "before": "Báo cáo kiểm thử logic thương mại ShopLab"
+  },
+  {
+    "paragraph": 385,
+    "action": "replace",
+    "before": "F-P2-001 (registration enumeration, Low) vẫn Open và chưa retest. Không sửa source ứng dụng trong Phần 4; Phần 5 chưa bắt đầu.",
+    "after": "F-P2-001 vẫn Open và chưa được kiểm tra lại. Mã nguồn ứng dụng được giữ nguyên trong Phần 4."
+  },
+  {
+    "paragraph": 390,
+    "action": "replace",
+    "before": "Ảnh được chụp từ browser tự động riêng. Không tuyên bố đã thu bằng Burp/Firefox của người dùng. 152 là số record client đã capture, không bao gồm mọi request nền browser; một POST checkout UI được lưu riêng trong browserCheckout.",
+    "after": "Ảnh giao diện được chụp bằng trình duyệt kiểm thử tự động. Bộ bằng chứng có 152 bản ghi HTTP client; một POST checkout trên giao diện được lưu riêng trong browserCheckout. Traffic nền của trình duyệt không được ghi toàn bộ."
+  },
+  {
+    "paragraph": 394,
+    "action": "replace",
+    "before": "F-P4-001 — Checkout vượt giới hạn tiền",
+    "after": "F P4 001 Checkout vượt giới hạn tiền"
+  },
+  {
+    "paragraph": 404,
+    "action": "replace",
+    "before": "Retest sau bản sửa — chưa thực hiện",
+    "after": "Retest sau bản sửa chưa thực hiện"
+  },
+  {
+    "paragraph": 411,
+    "action": "replace",
+    "before": "P4-01 — Baseline và actor riêng",
+    "after": "P4-01 Baseline và actor riêng"
+  },
+  {
+    "paragraph": 415,
+    "action": "replace",
+    "before": "P4-02 — Biên quantity và giá do client gửi",
+    "after": "P4-02 Biên quantity và giá do client gửi"
+  },
+  {
+    "paragraph": 419,
+    "action": "replace",
+    "before": "P4-03 — Coupon validation normalization thay thế và bỏ mã",
+    "after": "P4-03 Coupon validation normalization thay thế và bỏ mã"
+  },
+  {
+    "paragraph": 424,
+    "action": "replace",
+    "before": "P4-04 — Checkout dùng tổng tiền server và snapshot order",
+    "after": "P4-04 Checkout dùng tổng tiền server và snapshot order"
+  },
+  {
+    "paragraph": 428,
+    "action": "replace",
+    "before": "P4-05 — Stock và active đổi sau add cùng rollback nhiều item",
+    "after": "P4-05 Stock và active đổi sau add cùng rollback nhiều item"
+  },
+  {
+    "paragraph": 432,
+    "action": "replace",
+    "before": "P4-06 — Giá thay đổi trước và sau checkout",
+    "after": "P4-06 Giá thay đổi trước và sau checkout"
+  },
+  {
+    "paragraph": 437,
+    "action": "replace",
+    "before": "P4-07 — Coupon bị tắt hoặc hết hạn sau khi áp dụng",
+    "after": "P4-07 Coupon bị tắt hoặc hết hạn sau khi áp dụng"
+  },
+  {
+    "paragraph": 441,
+    "action": "replace",
+    "before": "P4-08 — Idempotency sequential và scope theo user",
+    "after": "P4-08 Idempotency sequential và scope theo user"
+  },
+  {
+    "paragraph": 445,
+    "action": "replace",
+    "before": "P4-09 — Bốn checkout đồng thời cùng key",
+    "after": "P4-09 Bốn checkout đồng thời cùng key"
+  },
+  {
+    "paragraph": 450,
+    "action": "replace",
+    "before": "P4-10 — Hai checkout khác key trên cùng cart",
+    "after": "P4-10 Hai checkout khác key trên cùng cart"
+  },
+  {
+    "paragraph": 454,
+    "action": "replace",
+    "before": "P4-11 — Hai user tranh sản phẩm còn một đơn vị",
+    "after": "P4-11 Hai user tranh sản phẩm còn một đơn vị"
+  },
+  {
+    "paragraph": 458,
+    "action": "replace",
+    "before": "P4-12 — Hai user tranh coupon còn một lượt toàn cục",
+    "after": "P4-12 Hai user tranh coupon còn một lượt toàn cục"
+  },
+  {
+    "paragraph": 463,
+    "action": "replace",
+    "before": "P4-13 — Coupon giới hạn mỗi user và hành vi sau hủy",
+    "after": "P4-13 Coupon giới hạn mỗi user và hành vi sau hủy"
+  },
+  {
+    "paragraph": 467,
+    "action": "replace",
+    "before": "P4-14 — Cancel đồng thời không hoàn stock hai lần",
+    "after": "P4-14 Cancel đồng thời không hoàn stock hai lần"
+  },
+  {
+    "paragraph": 471,
+    "action": "replace",
+    "before": "P4-15 — Không bỏ bước trạng thái hoặc hủy order đã hoàn tất",
+    "after": "P4-15 Không bỏ bước trạng thái hoặc hủy order đã hoàn tất"
+  },
+  {
+    "paragraph": 476,
+    "action": "replace",
+    "before": "P4-16 — Cancel và confirm cạnh tranh cùng order",
+    "after": "P4-16 Cancel và confirm cạnh tranh cùng order"
+  },
+  {
+    "paragraph": 480,
+    "action": "replace",
+    "before": "P4-17 — Discount 100 phần trăm và làm tròn VND",
+    "after": "P4-17 Discount 100 phần trăm và làm tròn VND"
+  },
+  {
+    "paragraph": 484,
+    "action": "replace",
+    "before": "P4-18 — Biên tổng tiền Decimal và rollback",
+    "after": "P4-18 Biên tổng tiền Decimal và rollback"
+  },
+  {
+    "paragraph": 489,
+    "action": "replace",
+    "before": "P4-19 — Minh chứng browser lỗi biên và order bình thường",
+    "after": "P4-19 Minh chứng browser lỗi biên và order bình thường"
+  },
+  {
+    "paragraph": 502,
+    "action": "replace",
+    "before": "Các phần injection, XSS, CSRF, file và cấu hình triển khai chưa được kết luận từ Phần 4. F-P2-001 vẫn Open. Báo cáo toàn đợt chưa hoàn tất; dừng sau phần này và chờ đồng ý trước Phần 5.",
+    "after": "Phần 4 tập trung vào logic nghiệp vụ; kết quả injection, XSS, CSRF, tệp và cấu hình triển khai được trình bày ở các chương tương ứng. F-P2-001 vẫn Open."
+  },
+  {
+    "paragraph": 507,
+    "action": "replace",
+    "before": "Tài liệu dùng định hướng và đối chiếu, không phải chứng nhận OWASP. Báo cáo được hoàn thiện ngày 26/09/2026.",
+    "after": "Tài liệu được dùng để xây dựng tiêu chí và đối chiếu kết quả. Phần kiểm thử này được hoàn thiện ngày 26/09/2026."
+  },
+  {
+    "paragraph": 509,
+    "action": "delete",
+    "before": "Nội dung từ Part5_Input_XSS_CSRF_Report.docx. Các bằng chứng và ngày thực hiện trong chương này giữ theo báo cáo gốc; kết luận toàn đợt xem Phần 8."
+  },
+  {
+    "paragraph": 510,
+    "action": "delete",
+    "before": "Báo cáo kiểm thử đầu vào XSS và CSRF ShopLab"
+  },
+  {
+    "paragraph": 518,
+    "action": "replace",
+    "before": "Không dùng Firefox/Burp của người dùng để tạo evidence. Không chạy scanner toàn diện, time-delay SQL, tải cao, command execution, đọc file host hay external callback. Upload/URL import và các kênh injection liên quan được để cho Phần 6; cấu hình triển khai đầy đủ thuộc Phần 7.",
+    "after": "Phần 5 không bao gồm scanner toàn diện, SQL injection dựa trên độ trễ, kiểm thử tải cao, thực thi lệnh, đọc tệp hệ điều hành hoặc external callback. Kết quả upload và URL import được trình bày ở Phần 6; rà soát cấu hình triển khai được trình bày ở Phần 7."
+  },
+  {
+    "paragraph": 641,
+    "action": "replace",
+    "before": "Chưa thử mọi field, encoding, sink, gadget, browser hay deployment. Không xác nhận chống SQLi time-based hoặc mọi injection backend. Kết quả rỗng trong storage chỉ đúng context/thời điểm đã đo; Secure=false là cấu hình HTTP local. Không coi đây là chứng nhận toàn web an toàn.",
+    "after": "Chưa thử mọi field, encoding, sink, gadget, browser hay deployment. Không xác nhận chống SQLi time-based hoặc mọi injection backend. Kết quả rỗng trong storage chỉ đúng context/thời điểm đã đo; Secure=false là cấu hình HTTP local."
+  },
+  {
+    "paragraph": 646,
+    "action": "replace",
+    "before": "Đối chiếu ngày 26/09/2026. Phần 5 kết thúc tại đây; chỉ tiếp tục Phần 6 sau khi người dùng đồng ý.",
+    "after": "Tài liệu XSS, CSRF và lưu trữ trên trình duyệt được đối chiếu ngày 26/09/2026."
+  },
+  {
+    "paragraph": 648,
+    "action": "delete",
+    "before": "Nội dung từ Part6_Files_SSRF_Report.docx. Các bằng chứng và ngày thực hiện trong chương này giữ theo báo cáo gốc; kết luận toàn đợt xem Phần 8."
+  },
+  {
+    "paragraph": 649,
+    "action": "delete",
+    "before": "Báo cáo kiểm thử tệp và URL import ShopLab"
+  },
+  {
+    "paragraph": 651,
+    "action": "replace",
+    "before": "PASS không có nghĩa mọi loại tệp an toàn hoặc hệ thống đã được chứng nhận chống SSRF. Các phép thử PDF chủ yếu xác minh chính sách hiện có và cách phục vụ download, không chứng minh tệp đã sạch malware.",
+    "after": "Kết quả chỉ áp dụng cho các mẫu tệp, URL và tiêu chí đã thử. Phép thử PDF xác minh chính sách tiếp nhận và tải xuống; chưa đánh giá khả năng phát hiện malware."
+  },
+  {
+    "paragraph": 652,
+    "action": "replace",
+    "before": "Không sửa source/cấu hình app. F-P2-001, F-P4-001 và F-P5-001 vẫn Open, không retest. Phần 7 chưa bắt đầu.",
+    "after": "Mã nguồn và cấu hình ứng dụng được giữ nguyên. F-P2-001, F-P4-001 và F-P5-001 vẫn Open, chưa được kiểm tra lại sau sửa."
+  },
+  {
+    "paragraph": 656,
+    "action": "replace",
+    "before": "Ảnh chụp bằng Chrome tự động riêng; không điều khiển Burp/Firefox của người dùng. Browser không có request interception. Traffic nền browser không được log toàn bộ; 79 là số bản ghi HTTP client riêng. Download browser có metadata và file bytes lưu trong evidence.",
+    "after": "Ảnh được chụp bằng Chrome tự động; lượt browser không sử dụng request interception. Bộ bằng chứng có 79 bản ghi HTTP client, chưa bao gồm toàn bộ traffic nền của trình duyệt. Kết quả tải xuống gồm metadata và bytes của tệp."
+  },
+  {
+    "paragraph": 670,
+    "action": "replace",
+    "before": "Chưa sửa hoặc retest theo yêu cầu chính sách mới. Kiểm thử sau thay đổi nên có PDF hợp lệ, PDF lỗi cấu trúc, PDF mã hóa và giới hạn tài nguyên parser; không tự đánh dấu Fixed khi chưa thống nhất tiêu chí nhận PDF.",
+    "after": "Chưa sửa hoặc retest theo yêu cầu chính sách mới. Kiểm thử sau thay đổi nên có PDF hợp lệ, PDF lỗi cấu trúc, PDF mã hóa và giới hạn tài nguyên parser; trạng thái chỉ được xác nhận sau khi thống nhất tiêu chí tiếp nhận PDF và có bằng chứng kiểm tra lại."
+  },
+  {
+    "paragraph": 675,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-001 đến E-P6-007. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-001 đến E-P6-007."
+  },
+  {
+    "paragraph": 679,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-008, E-P6-009, E-P6-010. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-008, E-P6-009, E-P6-010."
+  },
+  {
+    "paragraph": 683,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-011 đến E-P6-017; D-P6-001. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-011 đến E-P6-017; D-P6-001."
+  },
+  {
+    "paragraph": 688,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-018, E-P6-019; D-P6-002. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-018, E-P6-019; D-P6-002."
+  },
+  {
+    "paragraph": 692,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-020, E-P6-021; D-P6-003. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-020, E-P6-021; D-P6-003."
+  },
+  {
+    "paragraph": 696,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-022, E-P6-023, E-P6-024, E-P6-025; D-P6-004. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-022, E-P6-023, E-P6-024, E-P6-025; D-P6-004."
+  },
+  {
+    "paragraph": 701,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-026, E-P6-027, E-P6-028, E-P6-029, E-P6-030. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-026, E-P6-027, E-P6-028, E-P6-029, E-P6-030."
+  },
+  {
+    "paragraph": 705,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-031, E-P6-032, E-P6-033, E-P6-034, E-P6-035; D-P6-005. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-031, E-P6-032, E-P6-033, E-P6-034, E-P6-035; D-P6-005."
+  },
+  {
+    "paragraph": 709,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-036, E-P6-037, E-P6-038. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-036, E-P6-037, E-P6-038."
+  },
+  {
+    "paragraph": 714,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-039, E-P6-040, E-P6-041, E-P6-042; D-P6-006. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-039, E-P6-040, E-P6-041, E-P6-042; D-P6-006."
+  },
+  {
+    "paragraph": 718,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-043, E-P6-044, E-P6-045, E-P6-046, E-P6-047; D-P6-007. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-043, E-P6-044, E-P6-045, E-P6-046, E-P6-047; D-P6-007."
+  },
+  {
+    "paragraph": 722,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-048 đến E-P6-054; D-P6-008. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-048 đến E-P6-054; D-P6-008."
+  },
+  {
+    "paragraph": 727,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-055, E-P6-056, E-P6-057, E-P6-058. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-055, E-P6-056, E-P6-057, E-P6-058."
+  },
+  {
+    "paragraph": 731,
+    "action": "replace",
+    "before": "Bằng chứng: results.json browserDownload; downloaded-proof.pdf; E-P6-01. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: results.json browserDownload; downloaded-proof.pdf; E-P6-01."
+  },
+  {
+    "paragraph": 735,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-059, E-P6-060; D-P6-009. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-059, E-P6-060; D-P6-009."
+  },
+  {
+    "paragraph": 740,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-061, E-P6-062, E-P6-063. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-061, E-P6-062, E-P6-063."
+  },
+  {
+    "paragraph": 744,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-064 đến E-P6-073; D-P6-010. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-064 đến E-P6-073; D-P6-010."
+  },
+  {
+    "paragraph": 748,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-074, E-P6-075, E-P6-076, E-P6-077, E-P6-078; D-P6-011. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-074, E-P6-075, E-P6-076, E-P6-077, E-P6-078; D-P6-011."
+  },
+  {
+    "paragraph": 753,
+    "action": "replace",
+    "before": "Bằng chứng: C-P6-001 đến C-P6-007; component-checks.json; canary-log.json. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: C-P6-001 đến C-P6-007; component-checks.json; canary-log.json."
+  },
+  {
+    "paragraph": 757,
+    "action": "replace",
+    "before": "Bằng chứng: E-P6-079. PASS theo tiêu chí đã thử.",
+    "after": "Bằng chứng: E-P6-079."
+  },
+  {
+    "paragraph": 760,
+    "action": "replace",
+    "before": "P6-19 không kiểm thử DNS rebinding thực hoặc thay địa chỉ giữa hai lần lookup. Source pin kết quả DNS lookup vào request được rà soát nhưng chưa chứng minh mọi tình huống IPv6, proxy hoặc hạ tầng DNS. Không tự gộp 7 component checks thành 7 request HTTP live.",
+    "after": "P6-19 không kiểm thử DNS rebinding thực hoặc thay địa chỉ giữa hai lần lookup. Source pin kết quả DNS lookup vào request được rà soát nhưng chưa chứng minh mọi tình huống IPv6, proxy hoặc hạ tầng DNS. Bảy phép kiểm tra component được thống kê riêng với request HTTP vào ứng dụng đang chạy."
+  },
+  {
+    "paragraph": 770,
+    "action": "replace",
+    "before": "File directory snapshot và source hashes khớp sau cleanup. Sequence IDs và runtime logs vẫn tăng; không tuyên bố rollback toàn database. Dịch vụ ShopLab local được để chạy sau kiểm thử, còn canary và component fixture tạm đã đóng.",
+    "after": "File directory snapshot và source hashes khớp sau cleanup. Sequence IDs và runtime logs vẫn tăng; đây là đối chiếu bảo toàn dữ liệu, không phải khôi phục toàn database. Dịch vụ ShopLab local được để chạy sau kiểm thử, còn canary và component fixture tạm đã đóng."
+  },
+  {
+    "paragraph": 775,
+    "action": "replace",
+    "before": "F-P2-001, F-P4-001, F-P5-001 vẫn Open. O-P6-001 là quan sát và đề xuất chính sách nội dung PDF. Không sửa source trong đợt này. Chỉ chuyển sang Phần 7 sau khi người dùng đồng ý.",
+    "after": "F-P2-001, F-P4-001 và F-P5-001 vẫn Open. O-P6-001 là quan sát về xác thực nội dung PDF và cần tiêu chí sản phẩm cụ thể. Mã nguồn ứng dụng được giữ nguyên trong lượt kiểm thử này."
+  },
+  {
+    "paragraph": 779,
+    "action": "replace",
+    "before": "Đối chiếu ngày 26/09/2026; hướng dẫn dùng để chọn tiêu chí, không phải chứng nhận OWASP.",
+    "after": "Hướng dẫn về upload và SSRF được đối chiếu ngày 26/09/2026 để xây dựng tiêu chí kiểm thử."
+  },
+  {
+    "paragraph": 781,
+    "action": "delete",
+    "before": "Nội dung từ Part7_Configuration_Dependencies_Source_Report.docx. Các bằng chứng và ngày thực hiện trong chương này giữ theo báo cáo gốc; kết luận toàn đợt xem Phần 8."
+  },
+  {
+    "paragraph": 782,
+    "action": "delete",
+    "before": "Báo cáo kiểm thử cấu hình dependency và mã nguồn ShopLab"
+  },
+  {
+    "paragraph": 784,
+    "action": "replace",
+    "before": "Không sửa ứng dụng hoặc nâng cấp dependency. Đây là phần đánh giá đã hoàn tất với giới hạn được ghi rõ, chưa phải kết luận toàn bộ hệ thống an toàn hoặc sẵn sàng production. Không mở Phần 8 hoặc retest sau sửa trong lượt này.",
+    "after": "Phần 7 không thay đổi mã nguồn hoặc phiên bản dependency. Kết luận áp dụng cho môi trường local và các cấu hình đã rà soát; cấu hình triển khai thực tế và kiểm tra lại sau sửa vẫn còn ngoài phạm vi."
+  },
+  {
+    "paragraph": 798,
+    "action": "replace",
+    "before": "Đề xuất tách profile production, từ chối placeholder đã biết, dùng secret ngẫu nhiên từ nơi quản lý phù hợp, bắt buộc HTTPS/Secure khi public, tắt seed demo và xác minh tài khoản demo không tồn tại trong dữ liệu triển khai. Không tự sửa, xóa hoặc đổi mật khẩu tài khoản đang có.",
+    "after": "Đề xuất tách profile production, từ chối placeholder đã biết, dùng secret ngẫu nhiên từ nơi quản lý phù hợp, bắt buộc HTTPS/Secure khi public, tắt seed demo và xác minh tài khoản demo không tồn tại trong dữ liệu triển khai."
+  },
+  {
+    "paragraph": 850,
+    "action": "replace",
+    "before": "pnpm audit --json chạy thành công ngoài sandbox sau lượt đầu fetch failed. Metadata totalDependencies=594 và tất cả mức severity bằng 0; advisories rỗng. Không cộng các nhóm dependencies/dev/optional vì có phần chồng lấn. Kết quả là snapshot registry tại thời điểm chạy, không loại trừ zero-day, mã độc package hoặc lỗi dùng thư viện. Không chạy audit --fix, install hay update.",
+    "after": "pnpm audit --json chạy thành công. Metadata totalDependencies=594 và tất cả mức severity bằng 0; advisories rỗng. Không cộng các nhóm dependencies/dev/optional vì có phần chồng lấn. Kết quả là snapshot registry tại thời điểm chạy, không loại trừ zero-day, mã độc package hoặc lỗi dùng thư viện. Không chạy audit --fix, install hay update."
+  },
+  {
+    "paragraph": 880,
+    "action": "replace",
+    "before": "API log method/path/status/requestId, không log body/cookie/Authorization; Nginx dùng $uri thay vì toàn request query. Một số thay đổi có audit DB; login fail và nhiều action chưa có audit sự kiện riêng. .gitignore loại .env/.local/uploads, .dockerignore loại các thư mục tương ứng; đây không chứng minh lịch sử Git sạch. CI chạy frozen install, generate, unit/integration, build; chưa có bước audit dependency trong workflow. O-P7-003 đề xuất gate và policy cập nhật, không tự sửa CI.",
+    "after": "API log method/path/status/requestId, không log body/cookie/Authorization; Nginx dùng $uri thay vì toàn request query. Một số thay đổi có audit DB; login fail và nhiều action chưa có audit sự kiện riêng. .gitignore loại .env/.local/uploads, .dockerignore loại các thư mục tương ứng; đây không chứng minh lịch sử Git sạch. CI chạy frozen install, generate, unit/integration, build; chưa có bước audit dependency trong workflow. O-P7-003 đề xuất bổ sung bước audit trong CI và chính sách cập nhật dependency."
+  },
+  {
+    "paragraph": 887,
+    "action": "replace",
+    "before": "Đây là coverage theo nhóm mục tiêu, không phải tỷ lệ hoàn thành OWASP WSTG/ASVS. Phần 8 sẽ đối chiếu và chốt báo cáo toàn đợt sau khi được đồng ý; Phần 9 dành cho retest trên bản sửa được thống nhất.",
+    "after": "Mức bao phủ được thống kê theo các nhóm mục tiêu kiểm thử, chưa thể quy đổi thành tỷ lệ hoàn thành OWASP WSTG/ASVS. Đối chiếu toàn đợt và trạng thái phát hiện được trình bày ở chương kết luận; kiểm tra lại cần thực hiện trên bản ứng dụng đã sửa."
+  },
+  {
+    "paragraph": 899,
+    "action": "replace",
+    "before": "Không kiểm thử production thực, TLS/certificate, Docker network runtime, quyền volume/container, OS image CVE, full Git history, external callbacks, DoS, malware, DNS rebinding hoặc mọi tổ hợp race. Các lỗi sandbox khi build/audit/list đã được giải quyết bằng chạy được phép ngoài sandbox; không bị hiểu thành finding ứng dụng.",
+    "after": "Không kiểm thử production thực, TLS/certificate, Docker network runtime, quyền volume/container, OS image CVE, full Git history, external callbacks, DoS, malware, DNS rebinding hoặc mọi tổ hợp race."
+  },
+  {
+    "paragraph": 904,
+    "action": "replace",
+    "before": "Đối chiếu ngày 26/09/2026. Tài liệu hỗ trợ phương pháp và khuyến nghị; kết quả ShopLab dựa trên evidence riêng, không phải chứng nhận OWASP.",
+    "after": "Tài liệu được đối chiếu ngày 26/09/2026 và hỗ trợ phương pháp, khuyến nghị. Kết quả ShopLab được xác định từ bộ bằng chứng của từng phép thử."
+  },
+  {
+    "paragraph": 908,
+    "action": "replace",
+    "before": "Bốn finding duy nhất được xác nhận là F-P2-001, F-P4-001, F-P5-001 và F-P7-001. Cùng một lỗi xuất hiện ở API và UI hoặc nhiều endpoint không bị đếm thành nhiều finding. Bốn quan sát Informational gồm O-P6-001 và O-P7-001/002/003 được tách khỏi số lỗ hổng.",
+    "after": "Bốn phát hiện duy nhất của đợt gốc là F-P2-001, F-P4-001, F-P5-001 và F-P7-001. Các trường hợp tái hiện cùng nguyên nhân được giữ chung một mã phát hiện. Năm quan sát Informational được theo dõi riêng: O-P6-001, O-P7-001/002/003 và O-CAP-001 về việc mã CAPTCHA được thay chung theo email. Phần bổ sung ngày 06/10/2026 không phát sinh lỗ hổng bỏ qua CAPTCHA trong các phép thử đã thực hiện."
+  },
+  {
+    "paragraph": 921,
+    "action": "replace",
+    "before": "Thứ tự trên là ưu tiên công việc, không thay mức severity. Người phụ trách là vai trò đề xuất, chưa phải phân công đã được cá nhân chấp nhận. Không đặt ngày hoàn tất giả định khi chưa thống nhất lịch và yêu cầu nghiệp vụ.",
+    "after": "Thứ tự xử lý phản ánh ưu tiên công việc và không thay đổi mức độ nghiêm trọng của phát hiện. Các vai trò chủ trì là đề xuất để lập kế hoạch; thời hạn thực hiện cần được xác định theo kế hoạch dự án."
+  },
+  {
+    "paragraph": 932,
+    "action": "replace",
+    "before": "Production profile phải tắt seed, không nhận placeholder, dùng HTTPS/Secure đúng thiết kế; kiểm tra hai client sau Nginx và header giả từ nguồn không tin cậy; audit dependency/image tại ngày retest. PDF chỉ được coi đáp ứng khi có tiêu chí sản phẩm và bộ mẫu hợp lệ/lỗi tương ứng, không coi magic bytes là chứng nhận sạch malware.",
+    "after": "Production profile phải tắt seed, từ chối placeholder và dùng HTTPS/Secure đúng thiết kế. Kiểm tra hai client sau Nginx, header giả từ nguồn không tin cậy và audit dependency/image tại ngày kiểm tra lại. Tiêu chí PDF cần bộ mẫu hợp lệ và lỗi cấu trúc; magic bytes không xác nhận tệp sạch malware. Với O-CAP-001, kiểm tra việc tách challenge theo lượt xác thực, giữ bộ đếm sai theo email và từ chối mã hết hạn hoặc đã dùng. Cần đối chiếu hai trình duyệt cùng email để xác minh hành vi đổi mã theo thiết kế."
+  },
+  {
+    "paragraph": 933,
+    "action": "replace",
+    "before": "Phần 9 chưa thực hiện. Mỗi lần retest phải ghi commit hoặc hash/image thực, ngày kiểm tra, fixture, request/response, ảnh, trạng thái trước/sau và cleanup. Trạng thái dùng Fixed, Partially fixed, Not fixed hoặc Not retested; không tự đổi Open thành Fixed chỉ vì đã sửa code hoặc build thành công.",
+    "after": "Kiểm tra lại sau sửa chưa được thực hiện. Hồ sơ mỗi lượt cần ghi phiên bản hoặc hash/image, ngày kiểm tra, dữ liệu thử nghiệm, request/response, ảnh, trạng thái trước/sau và kết quả dọn dữ liệu. Trạng thái gồm Fixed, Partially fixed, Not fixed hoặc Not retested. Phát hiện chỉ được chuyển sang Fixed khi có bằng chứng kiểm tra lại đạt tiêu chí."
+  },
+  {
+    "paragraph": 936,
+    "action": "replace",
+    "before": "Audit dependency không có advisory là kết quả ngày 26/09/2026, không phải kết quả mới ngày 30/09. Tương tự, source/file/DB không đổi là hậu kiểm của từng lượt đã ghi, không chứng minh toàn workspace hiện tại chưa bị thay đổi từ sau ngày kiểm thử.",
+    "after": "Kết quả audit dependency thuộc ngày 26/09/2026. Kiểm thử bổ sung CAPTCHA ngày 06/10/2026 không chạy lại audit hoặc kiểm tra lại bốn phát hiện cũ. Các so sánh dữ liệu và source chỉ áp dụng cho từng lượt được ghi trong hồ sơ."
+  },
+  {
+    "paragraph": 938,
+    "action": "replace",
+    "before": "Báo cáo tổng giữ nội dung body, bảng và hình được chọn của cả bảy DOCX nguồn; thống nhất định dạng và số trang. Phần 8 là nội dung mới. CASE_LOG, HTTP JSON, DB/file checks, runner, ảnh gốc và evidence manifest trong pentest/runs/SL-PT-20260925/part1 đến part7 là hồ sơ kỹ thuật đi kèm, không nhúng raw credential hoặc backup DB vào Word.",
+    "after": "Hồ sơ kỹ thuật đợt gốc gồm CASE_LOG, HTTP JSON, đối chiếu DB/tệp, mã chạy kiểm thử, ảnh gốc và evidence manifest trong pentest/runs/SL-PT-20260925/part1 đến part7. Hồ sơ CAPTCHA bổ sung nằm tại pentest/runs/captcha-assessment-20261006-r2; log đối chứng trước đó tại pentest/runs/captcha-demo-20261001. Thông tin xác thực nguyên văn và backup DB được lưu riêng, không đính kèm báo cáo."
+  },
+  {
+    "paragraph": 939,
+    "action": "replace",
+    "before": "Hồ sơ Phần 8: integrity-check.json ghi kết quả đối chiếu manifest; merge-provenance.json ghi hash các DOCX nguồn và số phần tử/ảnh hợp nhất; findings-register.json chốt danh sách finding; RETEST_PLAN.md ghi tiêu chí cho Phần 9. Không chạy thêm phép thử hoặc sửa ứng dụng trong phần tổng hợp.",
+    "after": "Hồ sơ tổng kết gồm integrity-check.json đối chiếu manifest, merge-provenance.json ghi nguồn các báo cáo, findings-register.json thống kê phát hiện và RETEST_PLAN.md nêu tiêu chí kiểm tra lại sau sửa."
+  },
+  {
+    "paragraph": 940,
+    "action": "delete",
+    "before": "Kết luận bàn giao: hoàn tất Phần 1–8 trong phạm vi và giới hạn được ghi. Bốn finding còn Open và cần được xử lý hoặc chấp nhận rủi ro có lý do; retest chỉ bắt đầu sau khi có bản sửa và sự đồng ý cho Phần 9."
+  },
+  {
+    "table": 2,
+    "row": 4,
+    "col": 0,
+    "before": "Thực hiện",
+    "after": "Phương pháp"
+  },
+  {
+    "table": 2,
+    "row": 4,
+    "col": 1,
+    "before": "Trợ lý kiểm thử theo yêu cầu chủ dự án; gray-box tự đánh giá",
+    "after": "Kiểm thử gray-box trong môi trường nội bộ ShopLab"
+  },
+  {
+    "table": 7,
+    "row": 2,
+    "col": 0,
+    "before": "Người nhận và thực hiện",
+    "after": "Người nhận / phương pháp"
+  },
+  {
+    "table": 7,
+    "row": 2,
+    "col": 1,
+    "before": "Chủ dự án ShopLab; trợ lý kiểm thử theo yêu cầu, gray-box tự đánh giá",
+    "after": "Chủ dự án ShopLab / kiểm thử gray-box"
+  },
+  {
+    "table": 9,
+    "row": 2,
+    "col": 0,
+    "before": "Người nhận và thực hiện",
+    "after": "Người nhận / phương pháp"
+  },
+  {
+    "table": 9,
+    "row": 2,
+    "col": 1,
+    "before": "Chủ dự án ShopLab; trợ lý kiểm thử theo yêu cầu, gray-box tự đánh giá",
+    "after": "Chủ dự án ShopLab / kiểm thử gray-box"
+  },
+  {
+    "table": 14,
+    "row": 2,
+    "col": 0,
+    "before": "Người nhận / thực hiện",
+    "after": "Người nhận / phương pháp"
+  },
+  {
+    "table": 14,
+    "row": 2,
+    "col": 1,
+    "before": "Chủ dự án ShopLab / trợ lý kiểm thử theo yêu cầu; gray-box tự đánh giá",
+    "after": "Chủ dự án ShopLab / kiểm thử gray-box"
+  },
+  {
+    "table": 17,
+    "row": 2,
+    "col": 0,
+    "before": "Người nhận / thực hiện",
+    "after": "Người nhận / phương pháp"
+  },
+  {
+    "table": 17,
+    "row": 2,
+    "col": 1,
+    "before": "Chủ dự án ShopLab / trợ lý kiểm thử theo yêu cầu, gray-box tự đánh giá",
+    "after": "Chủ dự án ShopLab / kiểm thử gray-box"
+  },
+  {
+    "table": 20,
+    "row": 2,
+    "col": 0,
+    "before": "Người nhận và thực hiện",
+    "after": "Người nhận / phương pháp"
+  },
+  {
+    "table": 20,
+    "row": 2,
+    "col": 1,
+    "before": "Chủ dự án ShopLab / trợ lý kiểm thử theo yêu cầu / gray-box tự đánh giá",
+    "after": "Chủ dự án ShopLab / kiểm thử gray-box"
+  },
+  {
+    "table": 2,
+    "row": 10,
+    "col": 1,
+    "before": "6 ảnh viewport browser thật; không phải ảnh cửa sổ Burp",
+    "after": "6 ảnh viewport trình duyệt kiểm thử"
+  },
+  {
+    "table": 7,
+    "row": 7,
+    "col": 1,
+    "before": "4 ảnh browser thật, không phải capture cửa sổ Burp",
+    "after": "4 ảnh giao diện từ trình duyệt kiểm thử"
+  }
+]

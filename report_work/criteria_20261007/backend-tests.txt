@@ -1,0 +1,38 @@
+ShopLab backend test evidence
+Assessment date: 2026-10-07 (Asia/Bangkok)
+Command: C:\Users\ADMIN\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe scripts/test-local.mjs
+Scope: isolated PostgreSQL test cluster on 127.0.0.1:55433; temporary per-run test database; no frontend tests.
+Secret review: captured output contains no passwords, JWT secret, access token, refresh token, or complete credential-bearing database URL.
+
+Initial restricted attempt (exit 1; no Jest test results):
+Test runner failed.
+
+Authorized rerun outside the sandbox (exit 0):
+Prisma schema loaded from prisma\schema.prisma
+Datasource "db": PostgreSQL database "shoplab_test_1791356936111", schema "public" at "127.0.0.1:55433"
+
+3 migrations found in prisma/migrations
+
+Applying migration `202609220001_initial`
+Applying migration `202609220002_constraints`
+Applying migration `202609300001_login_captcha`
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 202609220001_initial/
+    └─ migration.sql
+  └─ 202609220002_constraints/
+    └─ migration.sql
+  └─ 202609300001_login_captcha/
+    └─ migration.sql
+
+All migrations have been successfully applied.
+(node:29356) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+Test Suites: 4 passed, 4 total
+Tests:       27 passed, 27 total
+Snapshots:   0 total
+Time:        13.901 s
+Ran all test suites.

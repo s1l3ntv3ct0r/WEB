@@ -1,0 +1,171 @@
+{
+  "replace": {
+    "3": "Người nhận: Chủ dự án ShopLab. Hình thức đánh giá: kiểm thử gray-box trong môi trường thử nghiệm nội bộ của ứng dụng.",
+    "4": "Báo cáo trình bày kết quả kiểm thử bảo mật ứng dụng ShopLab, các phát hiện đã xác nhận, thứ tự khắc phục và tiêu chí kiểm tra lại. Các phép thử nền được thực hiện ngày 25–26/09/2026; việc đối chiếu bằng chứng ngày 30/09/2026 không bao gồm chạy lại ứng dụng hoặc audit dependency.",
+    "20": "Mỗi trường hợp kiểm thử và bằng chứng được định danh bằng mã để tra cứu trong hồ sơ kỹ thuật. Các đường dẫn tương đối trong báo cáo được tính từ thư mục dự án.",
+    "25": "Kết quả từng chương phản ánh trạng thái ứng dụng tại ngày kiểm thử tương ứng. Danh sách phát hiện và trạng thái hiện hành được trình bày ở phần mở đầu và chương kết luận.",
+    "26": "Số lượng request được thống kê riêng theo phương pháp thu thập của từng chương. Traffic nền của trình duyệt không được ghi đồng nhất, vì vậy các số liệu này không được cộng thành tổng request hoặc tỷ lệ an toàn của ứng dụng.",
+    "31": "Môi trường local hoạt động và đã được lập danh mục bề mặt kiểm thử. Giai đoạn khảo sát chưa ghi nhận phát hiện bảo mật; các phép thử chuyên sâu được trình bày ở những chương tiếp theo.",
+    "34": "Không có thay đổi code ứng dụng trong lượt capture: hash của 81 tệp trong manifest trước/sau trùng nhau. Manifest định danh tệp trên đĩa; không chứng minh toàn bộ tiến trình đã được restart từ bản đó. Các dịch vụ và dữ liệu đang có không được khởi tạo lại trong giai đoạn khảo sát.",
+    "36": "Các request được gửi trực tiếp đến localhost bằng HTTP client và trình duyệt kiểm thử. Bộ điều hướng giới hạn origin ở http://localhost:5173; không ghi nhận request ngoài origin trong lượt khảo sát.",
+    "58": "Ba phiên được tạo trong lượt khảo sát đều nhận phản hồi logout 200. Quyền quản trị được giữ nguyên.",
+    "66": "Nguồn định hướng: pentest/scope.md, ASSESSMENT_SEQUENCE.md, docs/openapi.yaml, docs/authorization-matrix.md và route/middleware hiện tại. Phương pháp báo cáo tham khảo OWASP WSTG v4.2 Reporting: https://wstg.owasp.org/v4.2/5-Reporting/.",
+    "72": "PASS áp dụng cho tiêu chí ghi trong từng nhóm. Hai nhóm REVIEW, P2-03 và P2-15, cùng cung cấp bằng chứng cho F-P2-001. Phát hiện này còn Open và chưa được kiểm tra lại sau sửa.",
+    "74": "Trong lượt kiểm thử ngày 25/09/2026, các thao tác xác thực đã sử dụng hết bucket 30 request/15 phút của IP local. Response cuối ghi RateLimit r=0; t=748 lúc 16:44:44, tương ứng thời điểm khôi phục khoảng 16:57:12. Limiter được giữ nguyên; chuỗi kiểm tra ngưỡng 31 request chạy trên instance cô lập.",
+    "76": "Phạm vi gồm đăng ký, đăng nhập, JWT, refresh, logout, forgot/reset và đổi mật khẩu. Origin chuẩn là http://localhost:5173. Request được gửi bằng HTTP client và trình duyệt kiểm thử riêng.",
+    "79": "Hai fixture A/B được đăng ký qua API; C được tạo qua DB cho phép thử bổ sung. Sau mỗi lượt, xóa đúng các record user/session/refresh/reset/cart/audit thuộc fixture; không xóa tài khoản demo hay dữ liệu mua hàng có sẵn. Đối chiếu toàn bộ record User có sẵn trước/sau không thay đổi. Đối chiếu trong bước này giới hạn ở các bản ghi User có sẵn; những bảng khác và hoạt động đồng thời ngoài lượt kiểm thử chưa được so sánh đầy đủ.",
+    "224": "Mã chạy kiểm thử là pentest/run-part2.cjs và pentest/run-part2-password-change.cjs. Cả hai từ chối ghi đè khi bằng chứng đã tồn tại. Mỗi lượt kiểm tra lại cần thư mục mới, dữ liệu thử nghiệm mới và kế hoạch kiểm soát quota xác thực. Backup nhạy cảm được lưu riêng trong .local, không đính kèm báo cáo.",
+    "230": "Tài liệu WSTG được đối chiếu ngày 25/09/2026 và dùng để xây dựng tiêu chí kiểm thử.",
+    "234": "Phần 3 hoàn tất trong phạm vi đã thực hiện. Chưa xác nhận lỗi vượt quyền mới: truy cập chéo tài khoản, quyền admin và quan hệ ticket–message–attachment được chặn theo ma trận trong các trường hợp đã thử.",
+    "237": "Mã nguồn ứng dụng được giữ nguyên trong Phần 3. F-P2-001 vẫn Open và chưa được kiểm tra lại sau sửa.",
+    "242": "Ảnh upload là PNG 32×32 được tạo riêng cho kiểm thử. Sản phẩm thử nghiệm xuất hiện tạm trong catalogue và đã được dọn sau lượt chạy. Ảnh giao diện và bằng chứng HTTP được thu bằng trình duyệt và client kiểm thử riêng; tệp cá nhân được giữ nguyên.",
+    "257": "Kết quả: 38 request trả 401. Bao gồm profile, cart item, order read/cancel, ticket read/reply/close/upload, review edit/delete và các route admin. Các method ngoài danh sách kiểm thử chưa được đánh giá trong nhóm này.",
+    "340": "Kỳ vọng: Admin C chỉ đổi B synthetic; token trước promotion/demotion/disable hết hiệu lực; quyền mới chỉ dùng với phiên mới. Quyền ADMIN của C được giữ nguyên.",
+    "365": "Bảo toàn dữ liệu và giới hạn kiểm thử",
+    "378": "Tài liệu về IDOR và kiểm soát phân quyền được đối chiếu ngày 25/09/2026.",
+    "385": "F-P2-001 vẫn Open và chưa được kiểm tra lại. Mã nguồn ứng dụng được giữ nguyên trong Phần 4.",
+    "390": "Ảnh giao diện được chụp bằng trình duyệt kiểm thử tự động. Bộ bằng chứng có 152 bản ghi HTTP client; một POST checkout trên giao diện được lưu riêng trong browserCheckout. Traffic nền của trình duyệt không được ghi toàn bộ.",
+    "502": "Phần 4 tập trung vào logic nghiệp vụ; kết quả injection, XSS, CSRF, tệp và cấu hình triển khai được trình bày ở các chương tương ứng. F-P2-001 vẫn Open.",
+    "507": "Tài liệu được dùng để xây dựng tiêu chí và đối chiếu kết quả. Phần kiểm thử này được hoàn thiện ngày 26/09/2026.",
+    "518": "Phần 5 không bao gồm scanner toàn diện, SQL injection dựa trên độ trễ, kiểm thử tải cao, thực thi lệnh, đọc tệp hệ điều hành hoặc external callback. Kết quả upload và URL import được trình bày ở Phần 6; rà soát cấu hình triển khai được trình bày ở Phần 7.",
+    "641": "Chưa thử mọi field, encoding, sink, gadget, browser hay deployment. Không xác nhận chống SQLi time-based hoặc mọi injection backend. Kết quả rỗng trong storage chỉ đúng context/thời điểm đã đo; Secure=false là cấu hình HTTP local.",
+    "646": "Tài liệu XSS, CSRF và lưu trữ trên trình duyệt được đối chiếu ngày 26/09/2026.",
+    "651": "Kết quả chỉ áp dụng cho các mẫu tệp, URL và tiêu chí đã thử. Phép thử PDF xác minh chính sách tiếp nhận và tải xuống; chưa đánh giá khả năng phát hiện malware.",
+    "652": "Mã nguồn và cấu hình ứng dụng được giữ nguyên. F-P2-001, F-P4-001 và F-P5-001 vẫn Open, chưa được kiểm tra lại sau sửa.",
+    "656": "Ảnh được chụp bằng Chrome tự động; lượt browser không sử dụng request interception. Bộ bằng chứng có 79 bản ghi HTTP client, chưa bao gồm toàn bộ traffic nền của trình duyệt. Kết quả tải xuống gồm metadata và bytes của tệp.",
+    "670": "Chưa sửa hoặc retest theo yêu cầu chính sách mới. Kiểm thử sau thay đổi nên có PDF hợp lệ, PDF lỗi cấu trúc, PDF mã hóa và giới hạn tài nguyên parser; trạng thái chỉ được xác nhận sau khi thống nhất tiêu chí tiếp nhận PDF và có bằng chứng kiểm tra lại.",
+    "760": "P6-19 không kiểm thử DNS rebinding thực hoặc thay địa chỉ giữa hai lần lookup. Source pin kết quả DNS lookup vào request được rà soát nhưng chưa chứng minh mọi tình huống IPv6, proxy hoặc hạ tầng DNS. Bảy phép kiểm tra component được thống kê riêng với request HTTP vào ứng dụng đang chạy.",
+    "770": "File directory snapshot và source hashes khớp sau cleanup. Sequence IDs và runtime logs vẫn tăng; đây là đối chiếu bảo toàn dữ liệu, không phải khôi phục toàn database. Dịch vụ ShopLab local được để chạy sau kiểm thử, còn canary và component fixture tạm đã đóng.",
+    "775": "F-P2-001, F-P4-001 và F-P5-001 vẫn Open. O-P6-001 là quan sát về xác thực nội dung PDF và cần tiêu chí sản phẩm cụ thể. Mã nguồn ứng dụng được giữ nguyên trong lượt kiểm thử này.",
+    "779": "Hướng dẫn về upload và SSRF được đối chiếu ngày 26/09/2026 để xây dựng tiêu chí kiểm thử.",
+    "784": "Phần 7 không thay đổi mã nguồn hoặc phiên bản dependency. Kết luận áp dụng cho môi trường local và các cấu hình đã rà soát; cấu hình triển khai thực tế và kiểm tra lại sau sửa vẫn còn ngoài phạm vi.",
+    "798": "Đề xuất tách profile production, từ chối placeholder đã biết, dùng secret ngẫu nhiên từ nơi quản lý phù hợp, bắt buộc HTTPS/Secure khi public, tắt seed demo và xác minh tài khoản demo không tồn tại trong dữ liệu triển khai.",
+    "850": "pnpm audit --json chạy thành công. Metadata totalDependencies=594 và tất cả mức severity bằng 0; advisories rỗng. Không cộng các nhóm dependencies/dev/optional vì có phần chồng lấn. Kết quả là snapshot registry tại thời điểm chạy, không loại trừ zero-day, mã độc package hoặc lỗi dùng thư viện. Không chạy audit --fix, install hay update.",
+    "880": "API log method/path/status/requestId, không log body/cookie/Authorization; Nginx dùng $uri thay vì toàn request query. Một số thay đổi có audit DB; login fail và nhiều action chưa có audit sự kiện riêng. .gitignore loại .env/.local/uploads, .dockerignore loại các thư mục tương ứng; đây không chứng minh lịch sử Git sạch. CI chạy frozen install, generate, unit/integration, build; chưa có bước audit dependency trong workflow. O-P7-003 đề xuất bổ sung bước audit trong CI và chính sách cập nhật dependency.",
+    "887": "Mức bao phủ được thống kê theo các nhóm mục tiêu kiểm thử, chưa thể quy đổi thành tỷ lệ hoàn thành OWASP WSTG/ASVS. Đối chiếu toàn đợt và trạng thái phát hiện được trình bày ở chương kết luận; kiểm tra lại cần thực hiện trên bản ứng dụng đã sửa.",
+    "899": "Không kiểm thử production thực, TLS/certificate, Docker network runtime, quyền volume/container, OS image CVE, full Git history, external callbacks, DoS, malware, DNS rebinding hoặc mọi tổ hợp race.",
+    "904": "Tài liệu được đối chiếu ngày 26/09/2026 và hỗ trợ phương pháp, khuyến nghị. Kết quả ShopLab được xác định từ bộ bằng chứng của từng phép thử.",
+    "921": "Thứ tự xử lý phản ánh ưu tiên công việc và không thay đổi mức độ nghiêm trọng của phát hiện. Các vai trò chủ trì là đề xuất để lập kế hoạch; thời hạn thực hiện cần được xác định theo kế hoạch dự án.",
+    "933": "Kiểm tra lại sau sửa chưa được thực hiện. Hồ sơ mỗi lượt cần ghi phiên bản hoặc hash/image, ngày kiểm tra, dữ liệu thử nghiệm, request/response, ảnh, trạng thái trước/sau và kết quả dọn dữ liệu. Trạng thái gồm Fixed, Partially fixed, Not fixed hoặc Not retested. Phát hiện chỉ được chuyển sang Fixed khi có bằng chứng kiểm tra lại đạt tiêu chí.",
+    "938": "Hồ sơ kỹ thuật đi kèm gồm CASE_LOG, HTTP JSON, đối chiếu DB/tệp, mã chạy kiểm thử, ảnh gốc và evidence manifest trong pentest/runs/SL-PT-20260925/part1 đến part7. Thông tin xác thực nguyên văn và backup DB được lưu riêng, không đính kèm báo cáo.",
+    "939": "Hồ sơ kết luận gồm integrity-check.json ghi kết quả đối chiếu manifest, findings-register.json ghi danh sách phát hiện và RETEST_PLAN.md ghi tiêu chí kiểm tra lại. Giai đoạn đối chiếu bằng chứng không thực hiện thêm phép thử trên ứng dụng hoặc thay đổi mã nguồn.",
+    "940": "Đợt kiểm thử đã hoàn tất trong phạm vi và giới hạn nêu trong báo cáo. Các phát hiện còn Open cần được khắc phục hoặc được chấp nhận rủi ro với lý do cụ thể. Kiểm tra lại được thực hiện trên phiên bản đã sửa theo các tiêu chí nghiệm thu."
+  },
+  "delete": [
+    8,
+    28,
+    47,
+    48,
+    68,
+    102,
+    107,
+    118,
+    123,
+    128,
+    134,
+    139,
+    144,
+    150,
+    155,
+    160,
+    166,
+    171,
+    182,
+    187,
+    192,
+    198,
+    203,
+    208,
+    232,
+    380,
+    509,
+    648,
+    781
+  ],
+  "table_replace": [
+    {
+      "table": 2,
+      "row": 4,
+      "col": 0,
+      "text": "Phương pháp"
+    },
+    {
+      "table": 2,
+      "row": 4,
+      "col": 1,
+      "text": "Kiểm thử gray-box trong môi trường nội bộ ShopLab"
+    },
+    {
+      "table": 7,
+      "row": 2,
+      "col": 0,
+      "text": "Người nhận / phương pháp"
+    },
+    {
+      "table": 7,
+      "row": 2,
+      "col": 1,
+      "text": "Chủ dự án ShopLab / kiểm thử gray-box"
+    },
+    {
+      "table": 9,
+      "row": 2,
+      "col": 0,
+      "text": "Người nhận / phương pháp"
+    },
+    {
+      "table": 9,
+      "row": 2,
+      "col": 1,
+      "text": "Chủ dự án ShopLab / kiểm thử gray-box"
+    },
+    {
+      "table": 14,
+      "row": 2,
+      "col": 0,
+      "text": "Người nhận / phương pháp"
+    },
+    {
+      "table": 14,
+      "row": 2,
+      "col": 1,
+      "text": "Chủ dự án ShopLab / kiểm thử gray-box"
+    },
+    {
+      "table": 17,
+      "row": 2,
+      "col": 0,
+      "text": "Người nhận / phương pháp"
+    },
+    {
+      "table": 17,
+      "row": 2,
+      "col": 1,
+      "text": "Chủ dự án ShopLab / kiểm thử gray-box"
+    },
+    {
+      "table": 20,
+      "row": 2,
+      "col": 0,
+      "text": "Người nhận / phương pháp"
+    },
+    {
+      "table": 20,
+      "row": 2,
+      "col": 1,
+      "text": "Chủ dự án ShopLab / kiểm thử gray-box"
+    },
+    {
+      "table": 2,
+      "row": 10,
+      "col": 1,
+      "text": "6 ảnh viewport trình duyệt kiểm thử"
+    },
+    {
+      "table": 7,
+      "row": 7,
+      "col": 1,
+      "text": "4 ảnh giao diện từ trình duyệt kiểm thử"
+    }
+  ]
+}

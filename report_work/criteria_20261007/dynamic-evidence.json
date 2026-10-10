@@ -1,0 +1,622 @@
+{
+  "capturedAt": "2026-10-07T07:12:53.779Z",
+  "scope": "ShopLab DEV localhost:5173 only",
+  "results": [
+    {
+      "id": "T01",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 401,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "137",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:52 GMT",
+        "etag": "W/\"89-TwSKSjlZmFl7BLVu5Fb/0Wjsmr4\"",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "bd29e11a-16c0-4e5a-b87e-c6106e94adb3",
+        "x-xss-protection": "0"
+      },
+      "response": {
+        "success": false,
+        "error": {
+          "code": "UNAUTHENTICATED",
+          "message": "Please sign in again."
+        },
+        "requestId": "bd29e11a-16c0-4e5a-b87e-c6106e94adb3"
+      }
+    },
+    {
+      "id": "T02",
+      "method": "GET",
+      "path": "/api/admin/users",
+      "status": 401,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "137",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:52 GMT",
+        "etag": "W/\"89-4qLG7D036Arefns6zhZ5UrJaxYk\"",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "bf432c84-bdbe-46e2-8818-4059124bfb54",
+        "x-xss-protection": "0"
+      },
+      "response": {
+        "success": false,
+        "error": {
+          "code": "UNAUTHENTICATED",
+          "message": "Please sign in again."
+        },
+        "requestId": "bf432c84-bdbe-46e2-8818-4059124bfb54"
+      }
+    },
+    {
+      "id": "T03",
+      "method": "GET",
+      "path": "/api/does-not-exist",
+      "status": 404,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "129",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:52 GMT",
+        "etag": "W/\"81-gKvW/RX7+w6SVSb801Gfknm5tG0\"",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "09cfbde4-d107-4d64-827a-00ceacf8f270",
+        "x-xss-protection": "0"
+      },
+      "response": {
+        "success": false,
+        "error": {
+          "code": "NOT_FOUND",
+          "message": "Endpoint not found."
+        },
+        "requestId": "09cfbde4-d107-4d64-827a-00ceacf8f270"
+      }
+    },
+    {
+      "id": "T04",
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 401,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "144",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:53 GMT",
+        "etag": "W/\"90-8NJ6qOr5jOvdjqryNhnrWvMOdX4\"",
+        "origin-agent-cluster": "?1",
+        "ratelimit": "\"30-in-15min\"; r=29; t=900",
+        "ratelimit-policy": "\"30-in-15min\"; q=30; w=900; pk=:MTJjYTE3YjQ5YWYy:",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "992973f3-0654-459d-a653-5091e461a985",
+        "x-xss-protection": "0"
+      },
+      "request": {
+        "email": "user1@shoplab.local",
+        "password": "[đã che]"
+      },
+      "response": {
+        "success": false,
+        "error": {
+          "code": "LOGIN_FAILED",
+          "message": "Email or password is incorrect."
+        },
+        "requestId": "992973f3-0654-459d-a653-5091e461a985"
+      }
+    },
+    {
+      "id": "T05",
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "438",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:53 GMT",
+        "etag": "W/\"1b6-VHt6ppN4xzp6AzZiTaOIXw/hPFE\"",
+        "origin-agent-cluster": "?1",
+        "ratelimit": "\"30-in-15min\"; r=28; t=900",
+        "ratelimit-policy": "\"30-in-15min\"; q=30; w=900; pk=:MTJjYTE3YjQ5YWYy:",
+        "referrer-policy": "no-referrer",
+        "set-cookie": "shoplab_refresh=[đã che]; Max-Age=604800; Path=/api/auth; Expires=Wed, 14 Oct 2026 07:12:53 GMT; HttpOnly; SameSite=Strict",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "93d35a59-6a5e-471e-abf4-b92d867fd73d",
+        "x-xss-protection": "0"
+      },
+      "request": {
+        "email": "user1@shoplab.local",
+        "password": "[đã che]"
+      },
+      "response": {
+        "success": true,
+        "data": {
+          "accessToken": "[đã che]",
+          "user": {
+            "id": 2,
+            "email": "user1@shoplab.local",
+            "username": "user1",
+            "firstName": "Demo",
+            "lastName": "user1",
+            "role": "USER",
+            "active": true,
+            "avatarId": null
+          }
+        }
+      }
+    },
+    {
+      "id": "T06",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "163",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:53 GMT",
+        "etag": "W/\"a3-dc8isPvIxtZ2/gjy1qLiO+5vfEk\"",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "a11ec409-da9f-4775-9623-1a2ef4933aaf",
+        "x-xss-protection": "0"
+      },
+      "response": {
+        "success": true,
+        "data": {
+          "id": 2,
+          "email": "user1@shoplab.local",
+          "username": "user1",
+          "firstName": "Demo",
+          "lastName": "user1",
+          "role": "USER",
+          "active": true,
+          "avatarId": null
+        }
+      }
+    },
+    {
+      "id": "T07",
+      "method": "GET",
+      "path": "/api/admin/users",
+      "status": 403,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "140",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:53 GMT",
+        "etag": "W/\"8c-cW+I6LadoR5j4trDd3HVmkC2hOk\"",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "6450742e-8379-49ed-8100-72c5f81b7553",
+        "x-xss-protection": "0"
+      },
+      "response": {
+        "success": false,
+        "error": {
+          "code": "FORBIDDEN",
+          "message": "Administrator access required."
+        },
+        "requestId": "6450742e-8379-49ed-8100-72c5f81b7553"
+      }
+    },
+    {
+      "id": "T08",
+      "method": "GET",
+      "path": "/api/orders/2",
+      "status": 404,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "126",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:53 GMT",
+        "etag": "W/\"7e-tYPbS6zS7c7nrJddpUNXsFbavH8\"",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "49d6d1f8-9f3a-49a2-bce5-ea056e7709a6",
+        "x-xss-protection": "0"
+      },
+      "response": {
+        "success": false,
+        "error": {
+          "code": "NOT_FOUND",
+          "message": "Order not found."
+        },
+        "requestId": "49d6d1f8-9f3a-49a2-bce5-ea056e7709a6"
+      }
+    },
+    {
+      "id": "T09",
+      "method": "POST",
+      "path": "/api/auth/register",
+      "status": 400,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "150",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:53 GMT",
+        "etag": "W/\"96-cZJovI3atwhx7Vby0fUnLNnsdgE\"",
+        "origin-agent-cluster": "?1",
+        "ratelimit": "\"30-in-15min\"; r=27; t=899",
+        "ratelimit-policy": "\"30-in-15min\"; q=30; w=900; pk=:MTJjYTE3YjQ5YWYy:",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "9b7ac834-5962-43f0-a8c1-1e8a91d89d01",
+        "x-xss-protection": "0"
+      },
+      "request": {
+        "email": "criteria_mass_assignment_20261007@shoplab.local",
+        "username": "criteria_mass_assignment",
+        "password": "[đã che]",
+        "role": "ADMIN"
+      },
+      "response": {
+        "success": false,
+        "error": {
+          "code": "VALIDATION_ERROR",
+          "message": "input: Unrecognized key: \"role\""
+        },
+        "requestId": "9b7ac834-5962-43f0-a8c1-1e8a91d89d01"
+      }
+    },
+    {
+      "id": "T10",
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 400,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "145",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:53 GMT",
+        "etag": "W/\"91-MmJeyZq+IoJFnv/tyDBZpKvSgsY\"",
+        "origin-agent-cluster": "?1",
+        "ratelimit": "\"30-in-15min\"; r=26; t=899",
+        "ratelimit-policy": "\"30-in-15min\"; q=30; w=900; pk=:MTJjYTE3YjQ5YWYy:",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "95d2132c-8304-4525-817f-0b931df405ba",
+        "x-xss-protection": "0"
+      },
+      "request": {
+        "email": "not-an-email",
+        "password": "[đã che]"
+      },
+      "response": {
+        "success": false,
+        "error": {
+          "code": "VALIDATION_ERROR",
+          "message": "email: Invalid email address"
+        },
+        "requestId": "95d2132c-8304-4525-817f-0b931df405ba"
+      }
+    },
+    {
+      "id": "T11",
+      "method": "GET",
+      "path": "/api/products?q='%20OR%20'1'%3D'1",
+      "status": 200,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "124",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:53 GMT",
+        "etag": "W/\"7c-hsGAaS3MhW32ggOkkLEkfZzUSu4\"",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "3cbba47b-8d58-4bcd-bdc8-46523fa366a5",
+        "x-xss-protection": "0"
+      },
+      "response": {
+        "success": true,
+        "data": {
+          "items": [],
+          "total": 0,
+          "page": 1,
+          "limit": 12,
+          "categories": [
+            "Audio",
+            "Workspace",
+            "Everyday",
+            "Lifestyle"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T12",
+      "method": "POST",
+      "path": "/api/auth/logout",
+      "status": 200,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "49",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:53 GMT",
+        "etag": "W/\"31-WFfeXI8mjCbt2ea8GsZnPhEmznk\"",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "set-cookie": "shoplab_refresh=[đã che]; Path=/api/auth; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly; SameSite=Strict",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "2463e13f-1002-44a9-8aaa-bec70c6656b5",
+        "x-xss-protection": "0"
+      },
+      "response": {
+        "success": true,
+        "data": {
+          "message": "Signed out."
+        }
+      }
+    },
+    {
+      "id": "T13",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 401,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "144",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:53 GMT",
+        "etag": "W/\"90-mrDxu2IGGzLLwj21S1GTN3F76AY\"",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "b9702c46-8ebb-4152-9b91-ac89853e4fc9",
+        "x-xss-protection": "0"
+      },
+      "response": {
+        "success": false,
+        "error": {
+          "code": "UNAUTHENTICATED",
+          "message": "Session is no longer active."
+        },
+        "requestId": "b9702c46-8ebb-4152-9b91-ac89853e4fc9"
+      }
+    },
+    {
+      "id": "T14",
+      "method": "POST",
+      "path": "/api/auth/refresh",
+      "status": 401,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "137",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:53 GMT",
+        "etag": "W/\"89-9uP0eOzUhYcvSkMMihpnPRxFixQ\"",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "4017a300-962d-47c9-a257-3e154ce36059",
+        "x-xss-protection": "0"
+      },
+      "response": {
+        "success": false,
+        "error": {
+          "code": "INVALID_REFRESH",
+          "message": "Please sign in again."
+        },
+        "requestId": "4017a300-962d-47c9-a257-3e154ce36059"
+      }
+    },
+    {
+      "id": "T15",
+      "method": "POST",
+      "path": "/api/auth/refresh",
+      "status": 401,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:5173",
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "137",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Wed, 07 Oct 2026 07:12:53 GMT",
+        "etag": "W/\"89-wv7QB1Uw6IMPy3JjiF/x3PFXUWE\"",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-request-id": "16e0cabe-fac9-4a54-97e1-057f15d111e6",
+        "x-xss-protection": "0"
+      },
+      "response": {
+        "success": false,
+        "error": {
+          "code": "INVALID_REFRESH",
+          "message": "Please sign in again."
+        },
+        "requestId": "16e0cabe-fac9-4a54-97e1-057f15d111e6"
+      }
+    }
+  ],
+  "massAssignmentAccountCreated": 0,
+  "databaseListener": [
+    {
+      "listen_addresses": "127.0.0.1",
+      "port": "55432",
+      "db_user": "shoplab"
+    }
+  ],
+  "dbRolePrivileges": [
+    {
+      "rolsuper": true,
+      "rolcreatedb": true,
+      "rolcreaterole": true
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "capturedAt": "2026-10-07T07:12:52.451Z",
+  "query": "SELECT id, email, role, active, LEFT(\"passwordHash\",7), LENGTH(\"passwordHash\") FROM \"User\" ORDER BY id LIMIT 6;",
+  "rows": [
+    {
+      "id": 1,
+      "email": "admin@shoplab.local",
+      "role": "ADMIN",
+      "active": true,
+      "passwordHash": "$2b$12$[đã che]",
+      "hashLength": 60
+    },
+    {
+      "id": 2,
+      "email": "user1@shoplab.local",
+      "role": "USER",
+      "active": true,
+      "passwordHash": "$2b$12$[đã che]",
+      "hashLength": 60
+    },
+    {
+      "id": 3,
+      "email": "user2@shoplab.local",
+      "role": "USER",
+      "active": true,
+      "passwordHash": "$2b$12$[đã che]",
+      "hashLength": 60
+    },
+    {
+      "id": 4,
+      "email": "user3@shoplab.local",
+      "role": "USER",
+      "active": true,
+      "passwordHash": "$2b$12$[đã che]",
+      "hashLength": 60
+    },
+    {
+      "id": 5,
+      "email": "user4@shoplab.local",
+      "role": "USER",
+      "active": true,
+      "passwordHash": "$2b$12$[đã che]",
+      "hashLength": 60
+    },
+    {
+      "id": 6,
+      "email": "user5@shoplab.local",
+      "role": "USER",
+      "active": false,
+      "passwordHash": "$2b$12$[đã che]",
+      "hashLength": 60
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "assessmentDate": "2026-10-07",
+  "assessmentTimezone": "Asia/Bangkok",
+  "project": "ShopLab",
+  "runner": "scripts/test-local.mjs",
+  "runtime": "C:\\Users\\ADMIN\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+  "scope": "Backend unit and integration tests against a newly created isolated PostgreSQL test database on 127.0.0.1:55433",
+  "exitCode": 0,
+  "suiteCount": 4,
+  "suitesPassed": 4,
+  "suitesFailed": 0,
+  "testCount": 27,
+  "testsPassed": 27,
+  "testsFailed": 0,
+  "snapshots": 0,
+  "jestDurationSeconds": 13.901,
+  "failureDetails": [],
+  "runnerNotes": [
+    "The first restricted attempt exited 1 with only 'Test runner failed.' and no Jest results; the required escalated rerun completed successfully.",
+    "Three migrations applied in the temporary test database: initial, constraints, login_captcha.",
+    "The runner deletes its generated test database and upload directory in finally and stops the isolated test PostgreSQL server.",
+    "No application source changes or frontend test execution were performed."
+  ],
+  "files": [
+    {"path": "backend/tests/integration/application.test.js", "tests": 20},
+    {"path": "backend/tests/integration/login-captcha.test.js", "tests": 2},
+    {"path": "backend/tests/unit/origin.test.js", "tests": 3},
+    {"path": "backend/tests/unit/money.test.js", "tests": 2}
+  ],
+  "rubricMapping": [
+    {
+      "rubric": ["A5.6", "A5.7", "A8.authentication.6"],
+      "evidence": "application.test.js:141-175",
+      "observations": [
+        "Foreign-Origin refresh and logout return 403; configured loopback aliases succeed.",
+        "Refresh token reuse returns 401 and invalidates the rotated access token family.",
+        "Logout returns 200; replay of the previously valid access token at /api/auth/me returns 401.",
+        "Two concurrent password resets with one token return 200 and 400; the old access token returns 401.",
+        "Disabling an account invalidates its existing access token."
+      ]
+    },
+    {
+      "rubric": ["A6.8", "A8.authentication.2", "A8.authentication.3", "A8.authentication.5", "A9.5"],
+      "evidence": "login-captcha.test.js:19-54",
+      "observations": [
+        "The third failed login returns a CAPTCHA image; direct API login without the required CAPTCHA returns 401/CAPTCHA_REQUIRED with no cookie.",
+        "Wrong, expired, or reused CAPTCHA responses fail.",
+        "A valid challenge permits login with status 200 and clears the failure counter.",
+        "Parallel failed login attempts are counted; expired lockout state is cleared."
+      ]
+    },
+    {
+      "rubric": ["A7.6", "A7.7", "A8.authorization.4", "A8.authorization.5", "A8.authorization.6"],
+      "evidence": "application.test.js:37-71, 73-83, 112-127",
+      "observations": [
+        "Unauthenticated /api/admin/users returns 401; USER access returns 403; ADMIN access returns 200.",
+        "Registration with role=ADMIN returns 400; ordinary registration creates a USER and private cart.",
+        "Profile mass-assignment role=ADMIN returns 400 and the stored role remains USER.",
+        "Cross-user review update/delete, cart-item update, order access, ticket access, and attachment download are denied with 404.",
+        "The ticket owner and administrator can download the attachment; its backing private asset is not publicly retrievable."
+      ]
+    },
+    {
+      "rubric": ["A7.1", "A7.3", "A7.8"],
+      "evidence": "application.test.js:55-58, 66-71, 129-139",
+      "observations": [
+        "Product search with SQL metacharacters returns 200 and zero matches; excessive pagination is rejected with 400.",
+        "Negative and fractional cart quantities are rejected with 400.",
+        "A disguised SVG upload named as PNG is rejected; a decoded PNG succeeds.",
+        "Image import rejects an unapproved origin, a redirect, and an oversized response; an approved valid image succeeds."
+      ],
+      "limits": "The SQL metacharacter test targets product search only; it is not a direct SQL injection test of the login endpoint."
+    },
+    {
+      "rubric": ["A8.authentication.4", "A8.authentication.5"],
+      "evidence": "application.test.js:73-110; unit/money.test.js",
+      "observations": [
+        "Client-supplied order total is rejected; server total calculation, idempotent checkout, single-order concurrency, and stock protection pass.",
+        "Concurrent coupon usage respects maxUses; invalid order transitions are rejected.",
+        "Integer money calculation and terminal order state tests pass."
+      ],
+      "limits": "These are additional commerce-business-logic checks; they do not replace analysis of each authentication abuse scenario required by A8."
+    },
+    {
+      "rubric": ["A9.1", "A9.5"],
+      "evidence": "application.test.js:10-20; login-captcha.test.js",
+      "observations": [
+        "Test fixtures obtain access tokens through real application login handlers.",
+        "Successful and failed authentication behavior is exercised at the HTTP application interface."
+      ],
+      "limits": "Supertest exercises the Express application in-process; this is not a browser end-to-end, reverse-proxy, TLS, or public deployment test."
+    }
+  ],
+  "importantCoverageLimits": [
+    "27/27 passing is evidence for these assertions, not proof that the whole application is free of vulnerabilities.",
+    "The review test named 'persists plain text' submits <b>hello</b> and verifies creation/ownership statuses, but does not assert the saved content or browser rendering. Do not cite it as proof of frontend XSS escaping.",
+    "The coupon test name mentions non-reuse after cancellation but its assertions only test concurrent maximum-use enforcement. Do not overstate cancellation coverage.",
+    "No real login request screenshot, user database screenshot, frontend rendering observation, external HTTPS test, or production infrastructure validation is produced by this test run.",
+    "CAPTCHA tests create a known server-side challenge fixture to test its validation; they do not evaluate resistance to OCR or CAPTCHA solving."
+  ],
+  "logSecretReview": "Captured runner output checked: no password, JWT secret, access token, refresh token, or credential-bearing full database URL present."
+}
